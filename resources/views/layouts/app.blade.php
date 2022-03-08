@@ -5,7 +5,7 @@
         <title>GOLJO</title>
         <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes" />
 
-        <link rel="icon" type="image/png" href="{{ asset('img/omisenavi_favicon.png') }}">
+        <!-- <link rel="icon" type="image/png" href="{{ asset('img/omisenavi_favicon.png') }}"> -->
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
         <!-- <link rel="icon" type="image/png" href="https://mall.cpon.co.jp/favicon.png"> -->
@@ -29,7 +29,13 @@
                     <a href="" class="header_a">Fashionカタログ</a>
                 </div>
             </header>
-
+            <div class="insta_column">
+                <p class="insta_scroll">
+                    インスタグラム随時更新中！アクセスはこちらから！　インスタグラム随時更新中！アクセスはこちらから！　インスタグラム随時更新中！アクセスはこちらから！　
+                    インスタグラム随時更新中！アクセスはこちらから！　インスタグラム随時更新中！アクセスはこちらから！　インスタグラム随時更新中！アクセスはこちらから！　
+                    インスタグラム随時更新中！アクセスはこちらから！　インスタグラム随時更新中！アクセスはこちらから！　
+                </p>
+            </div>
             @yield('content')
 
             <footer>

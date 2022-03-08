@@ -21,11 +21,17 @@ header, footer {
 header {
     display: flex;
     justify-content: space-between;
+    width:100%;
+    position: fixed;
 }
 
 footer {
     padding-top: 30px;
     padding-bottom:10px;
+}
+
+#registration_pc {
+    overflow-x: hidden;
 }
 
 .body_sp {
@@ -63,6 +69,25 @@ li {
     margin: 22px;
 }
 
+.insta_column {
+    width:300%;
+    height:25px;
+    font: normal normal 300 13px/18px Open Sans;
+    color:#fff;
+    background-color: #E8247D;
+    position: fixed;
+    top: 114px;
+}
+
+.insta_scroll {
+    padding-top: 2px;
+    animation: text_scroll 50s linear infinite;
+}
+@keyframes text_scroll{
+    0% { transform: translateX(0%)}
+    100% { transform: translateX(-30%)}
+ }
+ 
 .footer_logo {
     margin: auto;
     display: block;
@@ -104,6 +129,35 @@ li {
     text-align: center;
 }
 
+.top_img1, .top_img2, .top_img3 {
+    width:100%;
+}
+
+.top_img1 {
+    margin-top: 139px;
+}
+.top_img3 {
+    margin-top: -90px;
+}
+
+.search_btn {
+    position: relative;
+    top: -110px;
+    right: 100px;
+    float: right;
+}
+
+.event_btn {
+    position: relative;
+    top: -110px;
+    left: 100px;
+    float: left;
+}
+
+.pickup_text {
+    margin-top:90px;
+    text-align: center;
+}
 .error_message {
     font-size: 15px;
     font-weight: bold;
