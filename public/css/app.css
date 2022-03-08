@@ -1,0 +1,132 @@
+/* iPad・スマホへの振り分け */
+
+/* 表示領域が1020px以上の場合に適用するスタイル（パソコン向け） */
+@media screen and (min-width: 1020px) {
+}	
+
+/* 表示領域が1019px以下の場合に適用するスタイル（スマホ向け） */
+@media screen and (max-width: 1019px) and (min-width: 551px) {
+}
+
+body {
+    font: normal normal normal 17px/16px Open Sans;
+}
+
+header, footer {
+    font: normal normal 600 15px/20px Open Sans;
+    background-color: #262626;
+    color:#fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    padding-top: 30px;
+    padding-bottom:10px;
+}
+
+.body_sp {
+    min-width:375px;
+    text-align:-webkit-center;
+}
+
+li {
+    list-style: none;
+}
+
+.none {
+    opacity: 0;
+    z-index:-1;
+}
+
+.logo_a {
+    width:200px;
+    height:100%;
+    display: block;
+    background-color: #fff;
+}
+
+.header_logo {
+    margin: auto;
+    display: block;
+}
+
+.header_menu {
+    margin-top: 50px;
+    width: 1130px;
+}
+
+.header_a {
+    margin: 22px;
+}
+
+.footer_logo {
+    margin: auto;
+    display: block;
+}
+
+.footer_menu {
+    text-align: center;
+    margin-top:40px;
+    margin-bottom: 60px;
+}
+
+.header_a, .footer_a {
+    color:#fff;
+    text-decoration: none;
+}
+
+.copyright {
+    text-align: center;
+}
+
+.error_message {
+    font-size: 15px;
+    font-weight: bold;
+    color:red;
+    text-align: center;
+}
+
+.td1s {
+    transition: .6s;
+    transition-delay: .1s;
+}
+
+.td2s {
+    transition: .6s;
+    transition-delay: .2s;
+}
+
+.td3s {
+    transition: .6s;
+    transition-delay: .3s;
+}
+
+.td4s {
+    transition: .6s;
+    transition-delay: .4s;
+}
+
+.td5s {
+    transition: .6s;
+    transition-delay: .5s;
+}
+
+.td6s {
+    transition: .6s;
+    transition-delay: .6s;
+}
+
+.td7s {
+    transition: .6s;
+    transition-delay: .7s;
+}
+
+.td8s {
+    transition: .6s;
+    transition-delay: .8s;
+}
+
