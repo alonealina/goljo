@@ -44,6 +44,16 @@
                     <a href="" class="footer_a">GOLJO 人気ランキング</a> 　｜　
                     <a href="" class="footer_a">Fashionカタログ</a>
                 </div>
+                <div class="footer_menu_n">
+                    <a href="" class="footer_a">GOLJOサーチ</a> 　｜　
+                    <a href="" class="footer_a">Pickup GOLJO</a> 　｜　
+                    <a href="" class="footer_a">イベント</a> 　｜　
+                    <a href="" class="footer_a">オススメGOLF場</a>
+                    <a href="" class="footer_a">練習場</a> 　｜　
+                    <a href="" class="footer_a">ニュース</a> 　｜　
+                    <a href="" class="footer_a">GOLJO 人気ランキング</a> 　｜　
+                    <a href="" class="footer_a">Fashionカタログ</a>
+                </div>
                 <div class="copyright">2022 ©︎ GOLJO All right.</div>
             </footer>
         </body>
