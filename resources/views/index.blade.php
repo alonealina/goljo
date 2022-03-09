@@ -43,7 +43,7 @@
                 <div class="top_news_text">
                     このたび、弊社ホームページを公開させていただきました。<br><br>
                     お客様におかれましては、より使いやすく、わかりやすいものとなるよう、作成いたしました。<br>
-                    文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限
+                    文字数制限テスト文字数制限テスト文字数制限テスト文字数制限テスト文字数制限テスト文字数制限テスト文字数制限テスト文字数制限テスト
                 </div>
             </div>
         </div>
@@ -55,7 +55,7 @@
                 <div class="top_news_text">
                     このたび、弊社ホームページを公開させていただきました。<br><br>
                     お客様におかれましては、より使いやすく、わかりやすいものとなるよう、作成いたしました。<br>
-                    文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限
+                    文字数制限テスト文字数制限テスト文字数制限テスト文字数制限テスト文字数制限テスト文字数制限テスト文字数制限テスト文字数制限テスト
                 </div>
             </div>
         </div>
@@ -69,7 +69,7 @@
                 <div class="top_news_text">
                     このたび、弊社ホームページを公開させていただきました。<br><br>
                     お客様におかれましては、より使いやすく、わかりやすいものとなるよう、作成いたしました。<br>
-                    文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限
+                    文字数制限テスト文字数制限テスト文字数制限テスト文字数制限テスト文字数制限テスト文字数制限テスト文字数制限テスト文字数制限テスト
                 </div>
             </div>
         </div>
@@ -81,11 +81,63 @@
                 <div class="top_news_text">
                     このたび、弊社ホームページを公開させていただきました。<br><br>
                     お客様におかれましては、より使いやすく、わかりやすいものとなるよう、作成いたしました。<br>
-                    文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限
+                    文字数制限テスト文字数制限テスト文字数制限テスト文字数制限テスト文字数制限テスト文字数制限テスト文字数制限テスト文字数制限テスト
                 </div>
             </div>
         </div>
     </div>
+    <a href=""><img src="{{ asset('img/more_btn.png') }}" class="news_more_btn" alt=""></a>
+</div>
+
+
+
+
+<div class="top_ranking">
+    <div class="title_text">
+        <span class="title_pink">GOLJO </span><span class="title_black">Ranking</span>
+        <div class="title_ja">－　ゴル嬢ランキング　－</div>
+        <div class="title_text2">GOLJOに所属しているキャバ嬢達の総ページアクセスランキング上位5名を表示しています。</div>
+    </div>
+    <div class="top_ranking_list">
+        <div class="top_ranking_content">
+            <img src="{{ asset('img/girl1.png') }}" class="top_ranking_img" alt="">
+            <img src="{{ asset('img/rank1.png') }}" class="top_rank_mark" alt="">
+        </div>
+        <div class="top_ranking_content">
+            <img src="{{ asset('img/girl2.png') }}" class="top_ranking_img" alt="">
+            <img src="{{ asset('img/rank2.png') }}" class="top_rank_mark" alt="">
+        </div>
+        <div class="top_ranking_content">
+            <img src="{{ asset('img/girl3.png') }}" class="top_ranking_img" alt="">
+            <img src="{{ asset('img/rank3.png') }}" class="top_rank_mark" alt="">
+        </div>
+        <div class="top_ranking_content">
+            <img src="{{ asset('img/girl4.png') }}" class="top_ranking_img" alt="">
+            <img src="{{ asset('img/rank4.png') }}" class="top_rank_mark" alt="">
+        </div>
+        <div class="top_ranking_content">
+            <img src="{{ asset('img/girl1.png') }}" class="top_ranking_img" alt="">
+            <img src="{{ asset('img/rank5.png') }}" class="top_rank_mark" alt="">
+        </div>
+    </div>
+    <a href=""><img src="{{ asset('img/more_btn.png') }}" class="news_more_btn" alt=""></a>
+
+</div>
+
+<div class="top_catalog">
+    <div class="title_text">
+        <span class="title_black">Fashion </span><span class="title_pink">Catalog</span>
+        <div class="title_ja">－　ファッションカタログ　－</div>
+        <div class="title_text2">GOLJOが自信を持ってオススメする全国の美人キャバ嬢達のファッションフォトコンテンツ！！</div>
+    </div>
+    <ul class="slider">
+        <li><img src="{{ asset('img/catalog1.png') }}" alt=""></li>
+        <li><img src="{{ asset('img/catalog2.png') }}" alt=""></li>
+        <li><img src="{{ asset('img/catalog3.png') }}" alt=""></li>
+        <li><img src="{{ asset('img/catalog4.png') }}" alt=""></li>
+        <li><img src="{{ asset('img/catalog1.png') }}" alt=""></li>
+        <li><img src="{{ asset('img/catalog2.png') }}" alt=""></li>
+    </ul>
 </div>
 
 @endsection
