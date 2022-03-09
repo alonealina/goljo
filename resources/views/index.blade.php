@@ -10,11 +10,13 @@
 </div>
 
 <div class="top_pickup">
-    <div class="pickup_text">
-        <span class="pickup_black">Pickup </span><span class="pickup_pink">GOLJO</span>
-        <div class="pickup_ja">－　ピップアップゴル嬢　－</div>
-        <div class="pickup_text2">GOLJOが自信を持ってオススメする全国の美人キャバ嬢達のフォトグラビアコンテンツ！！<br>
-        キャバ嬢グラビアを12件ピックアップして表示しています。</div>
+    <div class="title_text">
+        <span class="title_black">Pickup </span><span class="title_pink">GOLJO</span>
+        <div class="title_ja">－　ピップアップゴル嬢　－</div>
+        <div class="title_text2">
+            GOLJOが自信を持ってオススメする全国の美人キャバ嬢達のフォトグラビアコンテンツ！！<br>
+            キャバ嬢グラビアを12件ピックアップして表示しています。
+        </div>
     </div>
     <ul class="slider">
         <li><img src="{{ asset('img/girl1.png') }}" alt=""></li>
@@ -24,6 +26,66 @@
         <li><img src="{{ asset('img/girl1.png') }}" alt=""></li>
         <li><img src="{{ asset('img/girl2.png') }}" alt=""></li>
     </ul>
+</div>
+
+<div class="top_news">
+    <div class="title_text">
+        <span class="title_black">New</span><span class="title_pink">s</span>
+        <div class="title_ja">－　ゴル嬢ニュース　－</div>
+        <div class="title_text2">GOLJOからのキャバ嬢・ゴルフ等の関連ニュースやファッションリリース情報をお知らせ！</div>
+    </div>
+    <div class="top_news_list">
+        <div class="top_news_box">
+            <img src="{{ asset('img/news_img.png') }}" class="top_news_img" alt="">
+            <div class="top_news_content">
+                <div class="info_mark">INFO</div>
+                <div class="top_news_title">ホームページ開設のお知らせ</div>
+                <div class="top_news_text">
+                    このたび、弊社ホームページを公開させていただきました。<br><br>
+                    お客様におかれましては、より使いやすく、わかりやすいものとなるよう、作成いたしました。<br>
+                    文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限
+                </div>
+            </div>
+        </div>
+        <div class="top_news_box">
+            <img src="{{ asset('img/news_img.png') }}" class="top_news_img" alt="">
+            <div class="top_news_content">
+                <div class="golf_mark">GOLF</div>
+                <div class="top_news_title">ホームページ開設のお知らせ</div>
+                <div class="top_news_text">
+                    このたび、弊社ホームページを公開させていただきました。<br><br>
+                    お客様におかれましては、より使いやすく、わかりやすいものとなるよう、作成いたしました。<br>
+                    文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="top_news_list">
+        <div class="top_news_box">
+            <img src="{{ asset('img/news_img.png') }}" class="top_news_img" alt="">
+            <div class="top_news_content">
+                <div class="lady_mark">LADY</div>
+                <div class="top_news_title">ホームページ開設のお知らせ</div>
+                <div class="top_news_text">
+                    このたび、弊社ホームページを公開させていただきました。<br><br>
+                    お客様におかれましては、より使いやすく、わかりやすいものとなるよう、作成いたしました。<br>
+                    文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限
+                </div>
+            </div>
+        </div>
+        <div class="top_news_box">
+            <img src="{{ asset('img/news_img.png') }}" class="top_news_img" alt="">
+            <div class="top_news_content">
+                <div class="lady_mark">LADY</div>
+                <div class="top_news_title">ホームページ開設のお知らせ</div>
+                <div class="top_news_text">
+                    このたび、弊社ホームページを公開させていただきました。<br><br>
+                    お客様におかれましては、より使いやすく、わかりやすいものとなるよう、作成いたしました。<br>
+                    文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限文字数制限
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 @endsection
