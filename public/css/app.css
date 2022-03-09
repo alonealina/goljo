@@ -10,6 +10,7 @@
 
 body {
     font: normal normal normal 17px/16px Open Sans;
+    color:#262626;
 }
 
 header, footer {
@@ -23,6 +24,7 @@ header {
     justify-content: space-between;
     width:100%;
     position: fixed;
+    z-index: 9000;
 }
 
 footer {
@@ -77,6 +79,7 @@ li {
     background-color: #E8247D;
     position: fixed;
     top: 114px;
+    z-index: 9000;
 }
 
 .insta_scroll {
@@ -154,10 +157,32 @@ li {
     float: left;
 }
 
+.top_pickup {
+    margin-bottom: 150px;
+}
+
 .pickup_text {
     margin-top:90px;
     text-align: center;
 }
+
+.pickup_black, .pickup_pink {
+    font: normal normal bold 50px/80px Devanagari MT;
+}
+
+.pickup_pink {
+    color: #D93983;
+}
+
+.pickup_ja {
+    font: normal normal 600 16px/16px Open Sans;
+    color: #FFACD2;
+}
+
+.pickup_text2 {
+    margin:50px;
+}
+
 .error_message {
     font-size: 15px;
     font-weight: bold;
@@ -205,3 +230,7 @@ li {
     transition-delay: .8s;
 }
 
+@font-face {
+    font-family: 'Devanagari';
+    src: url('../fonts/Glegoo-Regular.ttf') format('truetype');
+}
