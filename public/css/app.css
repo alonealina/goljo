@@ -249,7 +249,7 @@ li {
     overflow: hidden;
 }
 
-.news_more_btn {
+.more_btn {
     position: relative;
     top: 35px;
     right: 12.5%;
@@ -294,6 +294,41 @@ li {
     left: 2%;
     position: relative;
     width: 20%;
+}
+
+.top_ranking_text {
+    top: 10px;
+    left: -30px;
+    position: relative;
+    display: inline-block;
+}
+
+.top_ranking_name {
+    top: 10px;
+    position: relative;
+    display: inline-block;
+    font-weight:bold;
+}
+
+@media screen and (min-width: 1200px) {
+    .top_ranking_content {
+        font: normal normal normal 13px/13px Open Sans;
+    }
+}	
+
+@media screen and (max-width: 1199px) {
+    .top_ranking_content {
+        font: normal normal normal 10px/10px Open Sans;
+    }
+}
+
+
+.rank_up_color {
+    color: #D90000;
+}
+
+.rank_down_color {
+    color: #0034E3;
 }
 
 .error_message {

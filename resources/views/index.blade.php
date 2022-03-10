@@ -86,7 +86,7 @@
             </div>
         </div>
     </div>
-    <a href=""><img src="{{ asset('img/more_btn.png') }}" class="news_more_btn" alt=""></a>
+    <a href=""><img src="{{ asset('img/more_btn.png') }}" class="more_btn" alt=""></a>
 </div>
 
 
@@ -102,25 +102,35 @@
         <div class="top_ranking_content">
             <img src="{{ asset('img/girl1.png') }}" class="top_ranking_img" alt="">
             <img src="{{ asset('img/rank1.png') }}" class="top_rank_mark" alt="">
+            <div class="top_ranking_text"><span class="rank_up_color">↑</span>前回2位</div>
+            <div class="top_ranking_name">丸々 まる子</div>
         </div>
         <div class="top_ranking_content">
             <img src="{{ asset('img/girl2.png') }}" class="top_ranking_img" alt="">
             <img src="{{ asset('img/rank2.png') }}" class="top_rank_mark" alt="">
+            <div class="top_ranking_text"><span class="rank_up_color">↑</span>前回56位</div>
+            <div class="top_ranking_name">丸々 まる子</div>
         </div>
         <div class="top_ranking_content">
             <img src="{{ asset('img/girl3.png') }}" class="top_ranking_img" alt="">
             <img src="{{ asset('img/rank3.png') }}" class="top_rank_mark" alt="">
+            <div class="top_ranking_text"><span class="rank_down_color">↓</span>前回1位</div>
+            <div class="top_ranking_name">丸々 まる子</div>
         </div>
         <div class="top_ranking_content">
             <img src="{{ asset('img/girl4.png') }}" class="top_ranking_img" alt="">
             <img src="{{ asset('img/rank4.png') }}" class="top_rank_mark" alt="">
+            <div class="top_ranking_text"><span class="rank_down_color">↓</span>前回2位</div>
+            <div class="top_ranking_name">丸々 まる子</div>
         </div>
         <div class="top_ranking_content">
             <img src="{{ asset('img/girl1.png') }}" class="top_ranking_img" alt="">
             <img src="{{ asset('img/rank5.png') }}" class="top_rank_mark" alt="">
+            <div class="top_ranking_text"><span class="rank_down_color">↓</span>前回3位</div>
+            <div class="top_ranking_name">丸々 まる子</div>
         </div>
     </div>
-    <a href=""><img src="{{ asset('img/more_btn.png') }}" class="news_more_btn" alt=""></a>
+    <a href=""><img src="{{ asset('img/more_btn.png') }}" class="more_btn" alt=""></a>
 
 </div>
 
@@ -130,7 +140,7 @@
         <div class="title_ja">－　ファッションカタログ　－</div>
         <div class="title_text2">GOLJOが自信を持ってオススメする全国の美人キャバ嬢達のファッションフォトコンテンツ！！</div>
     </div>
-    <ul class="slider">
+    <ul class="slider slider_catalog">
         <li><img src="{{ asset('img/catalog1.png') }}" alt=""></li>
         <li><img src="{{ asset('img/catalog2.png') }}" alt=""></li>
         <li><img src="{{ asset('img/catalog3.png') }}" alt=""></li>
@@ -138,6 +148,8 @@
         <li><img src="{{ asset('img/catalog1.png') }}" alt=""></li>
         <li><img src="{{ asset('img/catalog2.png') }}" alt=""></li>
     </ul>
+    <a href=""><img src="{{ asset('img/more_btn.png') }}" class="more_btn" alt=""></a>
+
 </div>
 
 @endsection
