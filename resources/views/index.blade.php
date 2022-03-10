@@ -1,15 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="top_content">
+<div class="top_content header_margin">
     <img src="{{ asset('img/top1.png') }}" class="top_img1" alt="">
     <img src="{{ asset('img/top2.png') }}" class="top_img2" alt="">
-    <a href=""><img src="{{ asset('img/search_btn.png') }}" class="search_btn" alt=""></a>
+    <a href="{{ route('search') }}"><img src="{{ asset('img/search_btn.png') }}" class="search_btn" alt=""></a>
     <img src="{{ asset('img/top3.png') }}" class="top_img3" alt="">
     <a href=""><img src="{{ asset('img/event_btn.png') }}" class="event_btn" alt=""></a>
 </div>
 
-<div class="top_pickup">
+<div class="content_div">
     <div class="title_text">
         <span class="title_black">Pickup </span><span class="title_pink">GOLJO</span>
         <div class="title_ja">－　ピップアップゴル嬢　－</div>
@@ -28,7 +28,7 @@
     </ul>
 </div>
 
-<div class="top_news">
+<div class="content_div_bg">
     <div class="title_text">
         <span class="title_black">New</span><span class="title_pink">s</span>
         <div class="title_ja">－　ゴル嬢ニュース　－</div>
@@ -92,7 +92,7 @@
 
 
 
-<div class="top_ranking">
+<div class="content_div">
     <div class="title_text">
         <span class="title_pink">GOLJO </span><span class="title_black">Ranking</span>
         <div class="title_ja">－　ゴル嬢ランキング　－</div>
@@ -134,7 +134,7 @@
 
 </div>
 
-<div class="top_catalog">
+<div class="content_div_bg">
     <div class="title_text">
         <span class="title_black">Fashion </span><span class="title_pink">Catalog</span>
         <div class="title_ja">－　ファッションカタログ　－</div>

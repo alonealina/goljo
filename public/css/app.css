@@ -27,6 +27,10 @@ header {
     z-index: 9000;
 }
 
+.header_margin {
+    margin-top:139px;
+}
+
 footer {
     padding-top: 30px;
     padding-bottom:10px;
@@ -44,6 +48,20 @@ footer {
 li {
     list-style: none;
 }
+
+select {
+    background: #626262 0% 0% no-repeat padding-box;
+    color:#fff;
+    font: normal normal 600 20px/30px Open Sans;
+    height:80px;
+    padding-left: 20px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url(../img/select_bg.png);
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
 
 .none {
     opacity: 0;
@@ -132,13 +150,12 @@ li {
     text-align: center;
 }
 
+/* TOP関連 */
+
 .top_img1, .top_img2, .top_img3 {
     width:100%;
 }
 
-.top_img1 {
-    margin-top: 139px;
-}
 .top_img3 {
     margin-top: -90px;
 }
@@ -157,12 +174,12 @@ li {
     float: left;
 }
 
-.top_pickup, .top_ranking {
+.content_div {
     padding-top:90px;
     padding-bottom: 150px;
 }
 
-.top_news, .top_catalog {
+.content_div_bg {
     padding-top:90px;
     padding-bottom: 150px;
     background-image: url(../img/bg1.png);
@@ -322,7 +339,6 @@ li {
     }
 }
 
-
 .rank_up_color {
     color: #D90000;
 }
@@ -330,6 +346,108 @@ li {
 .rank_down_color {
     color: #0034E3;
 }
+
+/* TOP関連ここまで */
+
+/* GOLJOサーチ関連 */
+.search_form, .search_list {
+    width:75%;
+    text-align: center;
+    margin:auto;
+}
+
+.search_list {
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    -webkit-justify-content: space-between; /* Safari */
+    justify-content:         space-between;
+    flex-wrap : wrap;
+}
+
+.search_text {
+    width:100%;
+    margin-top:50px;
+    margin-bottom: 20px;
+}
+
+.select_tag, .select_name {
+    width:48%;
+}
+
+.select_tag {
+    float: left;
+}
+
+.select_name {
+    float: right;
+}
+
+.search_page_before, .search_page_after {
+    display: flex;
+    justify-content: space-between;
+    font: normal normal normal 17px/30px Open Sans;
+    margin:150px auto 100px auto;
+    width: 75%;
+}
+
+.search_page_before {
+    margin:150px auto 100px auto;
+}
+
+.search_page_after {
+    margin:60px auto 0px auto;
+}
+
+.search_count {
+    font: normal normal normal 27px/30px Open Sans;
+}
+.search_list_item {
+    width: 18%;
+    padding-bottom: 20px;
+}
+
+.search_list_img {
+    width: 100%;
+}
+
+.search_list_name {
+    font: normal normal 600 16px/16px Open Sans;
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+
+.search_list_area {
+    font: normal normal 600 14px/14px Open Sans;
+}
+
+.search_radio_list {
+    width:100%;
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    -webkit-justify-content: space-between; /* Safari */
+    justify-content:         space-between;
+}
+
+.search_radio {
+    display: none;
+}
+
+label {
+    background-color: #fff;
+    cursor: pointer;
+    border: 1px solid #BBBBBB;
+    border-radius: 6px;
+    width:16%;
+    padding: 18px;
+    letter-spacing: 5px;
+    font: normal normal normal 24px/24px Open Sans;
+}
+
+.search_radio:checked + label {
+    background-color: #E8247D;
+    color: #fff;
+}
+/* GOLJOサーチ関連ここまで */
 
 .error_message {
     font-size: 15px;

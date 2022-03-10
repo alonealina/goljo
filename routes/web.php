@@ -3,17 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'App\Http\Controllers\GoljoController@index')->name('index');
-Route::post('app_store', 'App\Http\Controllers\GoljoController@app_store')->name('app_store');
-Route::get('settle', 'App\Http\Controllers\GoljoController@settle')->name('settle');
-Route::post('confirm_post', 'App\Http\Controllers\GoljoController@confirm_post')->name('confirm_post');
-Route::get('confirm', 'App\Http\Controllers\GoljoController@confirm')->name('confirm');
-Route::post('txid_store', 'App\Http\Controllers\GoljoController@txid_store')->name('txid_store');
-Route::get('complete', 'App\Http\Controllers\GoljoController@complete')->name('complete');
-Route::get('dashboard', 'App\Http\Controllers\GoljoController@dashboard')->name('dashboard')->middleware('login_user');
-
-Route::get('admin/app_list', 'App\Http\Controllers\GoljoController@app_list')->name('admin.app_list')->middleware('login_admin');
-Route::get('admin/app_list_delete', 'App\Http\Controllers\GoljoController@app_list_delete')->name('admin.app_list_delete')->middleware('login_admin');
-Route::get('admin/search', 'App\Http\Controllers\GoljoController@search')->name('admin.search')->middleware('login_admin');
+Route::get('search', 'App\Http\Controllers\GoljoController@search')->name('search');
 
 // ユーザーログイン
 Route::get('login', function () { return view('login_user'); });

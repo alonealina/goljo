@@ -23,7 +23,7 @@
                     <img src="{{ asset('img/logo.png') }}" class="header_logo" alt="">
                 </a>
                 <div class="header_menu">
-                    <a href="" class="header_a">GOLJOサーチ</a>
+                    <a href="{{ route('search') }}" class="header_a">GOLJOサーチ</a>
                     <a href="" class="header_a">Pickup GOLJO</a>
                     <a href="" class="header_a">イベント</a>
                     <a href="" class="header_a">オススメGOLF場</a>
@@ -45,7 +45,7 @@
             <footer>
                 <a href="/"><img src="{{ asset('img/logo2.png') }}" class="footer_logo" alt=""></a>
                 <div class="footer_menu">
-                    <a href="" class="footer_a">GOLJOサーチ</a> 　｜　
+                    <a href="{{ route('search') }}" class="footer_a">GOLJOサーチ</a> 　｜　
                     <a href="" class="footer_a">Pickup GOLJO</a> 　｜　
                     <a href="" class="footer_a">イベント</a> 　｜　
                     <a href="" class="footer_a">オススメGOLF場</a> 　｜　
