@@ -216,6 +216,9 @@ select {
     justify-content: space-between;
     width:75%;
     margin: auto;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .top_news_box {
@@ -402,6 +405,7 @@ select {
 .search_count {
     font: normal normal normal 27px/30px Open Sans;
 }
+
 .search_list_item {
     width: 18%;
     padding-bottom: 20px;
@@ -460,12 +464,20 @@ label {
     width: 100%;
 }
 
-.page_div {
+.page_div, .page_div_news {
     display: flex;
     justify-content: space-between;
     font: normal normal normal 17px/30px Open Sans;
     margin:30px auto 60px auto;
     width: 60%;
+}
+
+.page_div {
+    width: 60%;
+}
+
+.page_div_news {
+    width: 75%;
 }
 
 .search_list_box {
@@ -544,6 +556,49 @@ label {
 }
 
 /* イベント等関連ここまで */
+
+/* ランキング関連 */
+
+.ranking_list {
+    width:75%;
+    margin:auto;
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    -webkit-justify-content: space-between; /* Safari */
+    justify-content:         space-between;
+    flex-wrap : wrap;
+}
+
+.ranking_list_item {
+    width: 18%;
+    padding-bottom: 20px;
+}
+
+.ranking_list_img {
+    width: 100%;
+}
+
+.rank_mark {
+    bottom: 78%;
+    left: 2%;
+    position: relative;
+    width: 20%;
+}
+
+.ranking_list_name {
+    text-align: center;
+    font: normal normal 600 16px/16px Open Sans;
+    margin-top: -30px;
+    margin-bottom: 12px;
+}
+
+.ranking_list_area {
+    text-align: center;
+    font: normal normal 600 14px/14px Open Sans;
+}
+
+
+/* ランキング関連ここまで */
 
 .error_message {
     font-size: 15px;

@@ -7,6 +7,8 @@ Route::get('search', 'App\Http\Controllers\GoljoController@search')->name('searc
 Route::get('event', 'App\Http\Controllers\GoljoController@event')->name('event');
 Route::get('course', 'App\Http\Controllers\GoljoController@course')->name('course');
 Route::get('practice', 'App\Http\Controllers\GoljoController@practice')->name('practice');
+Route::get('news', 'App\Http\Controllers\GoljoController@news')->name('news');
+Route::get('ranking', 'App\Http\Controllers\GoljoController@ranking')->name('ranking');
 
 // ユーザーログイン
 Route::get('login', function () { return view('login_user'); });

@@ -32,5 +32,15 @@ class GoljoController extends Controller
         return view('practice');
     }
 
+    public function news()
+    {
+        return view('news');
+    }
+
+    public function ranking()
+    {
+        return view('ranking');
+    }
+
 
 }

@@ -59,8 +59,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="top_news_list">
         <div class="top_news_box">
             <img src="{{ asset('img/news_img.png') }}" class="top_news_img" alt="">
             <div class="top_news_content">

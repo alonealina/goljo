@@ -28,8 +28,8 @@
                     <a href="{{ route('event') }}" class="header_a">イベント</a>
                     <a href="{{ route('course') }}" class="header_a">オススメGOLF場</a>
                     <a href="{{ route('practice') }}" class="header_a">練習場</a>
-                    <a href="" class="header_a">ニュース</a>
-                    <a href="" class="header_a">GOLJO 人気ランキング</a>
+                    <a href="{{ route('news') }}" class="header_a">ニュース</a>
+                    <a href="{{ route('ranking') }}" class="header_a">GOLJO 人気ランキング</a>
                     <a href="" class="header_a">Fashionカタログ</a>
                 </div>
             </header>
@@ -50,8 +50,8 @@
                     <a href="{{ route('event') }}" class="footer_a">イベント</a> 　｜　
                     <a href="{{ route('course') }}" class="footer_a">オススメGOLF場</a> 　｜　
                     <a href="{{ route('practice') }}" class="footer_a">練習場</a> 　｜　
-                    <a href="" class="footer_a">ニュース</a> 　｜　
-                    <a href="" class="footer_a">GOLJO 人気ランキング</a> 　｜　
+                    <a href="{{ route('news') }}" class="footer_a">ニュース</a> 　｜　
+                    <a href="{{ route('ranking') }}" class="footer_a">GOLJO 人気ランキング</a> 　｜　
                     <a href="" class="footer_a">Fashionカタログ</a>
                 </div>
                 <div class="footer_menu_n">
@@ -60,8 +60,8 @@
                     <a href="{{ route('event') }}" class="footer_a">イベント</a> 　｜　
                     <a href="{{ route('course') }}" class="footer_a">オススメGOLF場</a>
                     <a href="{{ route('practice') }}" class="footer_a">練習場</a> 　｜　
-                    <a href="" class="footer_a">ニュース</a> 　｜　
-                    <a href="" class="footer_a">GOLJO 人気ランキング</a> 　｜　
+                    <a href="{{ route('news') }}" class="footer_a">ニュース</a> 　｜　
+                    <a href="{{ route('ranking') }}" class="footer_a">GOLJO 人気ランキング</a> 　｜　
                     <a href="" class="footer_a">Fashionカタログ</a>
                 </div>
                 <div class="copyright">2022 ©︎ GOLJO All right.</div>
