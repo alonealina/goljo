@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'App\Http\Controllers\GoljoController@index')->name('index');
 Route::get('search', 'App\Http\Controllers\GoljoController@search')->name('search');
+Route::get('event', 'App\Http\Controllers\GoljoController@event')->name('event');
+Route::get('course', 'App\Http\Controllers\GoljoController@course')->name('course');
+Route::get('practice', 'App\Http\Controllers\GoljoController@practice')->name('practice');
 
 // ユーザーログイン
 Route::get('login', function () { return view('login_user'); });

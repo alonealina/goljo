@@ -185,6 +185,11 @@ select {
     background-image: url(../img/bg1.png);
 }
 
+.main_img {
+    margin-top: -130px;
+    width: 100%;
+}
+
 .title_text {
     text-align: center;
 }
@@ -227,10 +232,6 @@ select {
     width:45%;
     height:220px;
     margin-right: 20px;
-    display: inline-block;
-}
-
-.top_news_content {
     display: inline-block;
 }
 
@@ -448,6 +449,101 @@ label {
     color: #fff;
 }
 /* GOLJOサーチ関連ここまで */
+
+/* イベント等関連 */
+.search_form2, .search_list2 {
+    width:60%;
+    margin:auto;
+}
+
+.select_name2 {
+    width: 100%;
+}
+
+.page_div {
+    display: flex;
+    justify-content: space-between;
+    font: normal normal normal 17px/30px Open Sans;
+    margin:30px auto 60px auto;
+    width: 60%;
+}
+
+.search_list_box {
+    width: 100%;
+    margin-bottom: 40px;
+    display: flex;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 3px 3px 3px #00000019;
+    border: 0.9px solid #D0D0D0;
+    padding: 20px 30px;
+}
+
+.area_mark {
+    background: #646464 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 60px;
+    height: 17px;
+    font: normal normal 600 11px/16px Open Sans;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+
+@media screen and (min-width: 1300px) {
+    .search_box_img {
+        width: 30%;
+        margin-right: 30px;
+    }
+        
+    .search_box_date {
+        margin-top:10px;
+    }
+
+    .search_box_title {
+        font: normal normal 600 23px/23px Open Sans;
+        margin-top: 10px;
+    }
+    
+    .search_box_text {
+        font: normal normal normal 17px/20px Open Sans;
+        margin-top: 30px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        overflow: hidden;
+        word-break: break-all
+    }
+}	
+
+@media screen and (max-width: 1299px) {
+    .search_box_img {
+        width: 40%;
+        margin-right: 30px;
+    }
+
+    .search_box_date {
+        font: normal normal normal 13px/13px Open Sans;
+        margin-top:8px;
+    }
+
+    .search_box_title {
+        font: normal normal 600 20px/20px Open Sans;
+        margin-top: 8px;
+    }
+    
+    .search_box_text {
+        font: normal normal normal 13px/16px Open Sans;
+        margin-top: 20px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        overflow: hidden;
+        word-break: break-all
+    }
+}
+
+/* イベント等関連ここまで */
 
 .error_message {
     font-size: 15px;

@@ -25,9 +25,9 @@
                 <div class="header_menu">
                     <a href="{{ route('search') }}" class="header_a">GOLJOサーチ</a>
                     <a href="" class="header_a">Pickup GOLJO</a>
-                    <a href="" class="header_a">イベント</a>
-                    <a href="" class="header_a">オススメGOLF場</a>
-                    <a href="" class="header_a">練習場</a>
+                    <a href="{{ route('event') }}" class="header_a">イベント</a>
+                    <a href="{{ route('course') }}" class="header_a">オススメGOLF場</a>
+                    <a href="{{ route('practice') }}" class="header_a">練習場</a>
                     <a href="" class="header_a">ニュース</a>
                     <a href="" class="header_a">GOLJO 人気ランキング</a>
                     <a href="" class="header_a">Fashionカタログ</a>
@@ -47,19 +47,19 @@
                 <div class="footer_menu">
                     <a href="{{ route('search') }}" class="footer_a">GOLJOサーチ</a> 　｜　
                     <a href="" class="footer_a">Pickup GOLJO</a> 　｜　
-                    <a href="" class="footer_a">イベント</a> 　｜　
-                    <a href="" class="footer_a">オススメGOLF場</a> 　｜　
-                    <a href="" class="footer_a">練習場</a> 　｜　
+                    <a href="{{ route('event') }}" class="footer_a">イベント</a> 　｜　
+                    <a href="{{ route('course') }}" class="footer_a">オススメGOLF場</a> 　｜　
+                    <a href="{{ route('practice') }}" class="footer_a">練習場</a> 　｜　
                     <a href="" class="footer_a">ニュース</a> 　｜　
                     <a href="" class="footer_a">GOLJO 人気ランキング</a> 　｜　
                     <a href="" class="footer_a">Fashionカタログ</a>
                 </div>
                 <div class="footer_menu_n">
-                    <a href="" class="footer_a">GOLJOサーチ</a> 　｜　
+                    <a href="{{ route('search') }}" class="footer_a">GOLJOサーチ</a> 　｜　
                     <a href="" class="footer_a">Pickup GOLJO</a> 　｜　
-                    <a href="" class="footer_a">イベント</a> 　｜　
-                    <a href="" class="footer_a">オススメGOLF場</a>
-                    <a href="" class="footer_a">練習場</a> 　｜　
+                    <a href="{{ route('event') }}" class="footer_a">イベント</a> 　｜　
+                    <a href="{{ route('course') }}" class="footer_a">オススメGOLF場</a>
+                    <a href="{{ route('practice') }}" class="footer_a">練習場</a> 　｜　
                     <a href="" class="footer_a">ニュース</a> 　｜　
                     <a href="" class="footer_a">GOLJO 人気ランキング</a> 　｜　
                     <a href="" class="footer_a">Fashionカタログ</a>
