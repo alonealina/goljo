@@ -10,14 +10,7 @@
             あなたの好みにピッタリのキャバ嬢を今すぐ探し出そう！
         </div>
     </div>
-    <!-- <ul class="slider">
-        <li><img src="{{ asset('img/girl1.png') }}" alt=""></li>
-        <li><img src="{{ asset('img/girl2.png') }}" alt=""></li>
-        <li><img src="{{ asset('img/girl3.png') }}" alt=""></li>
-        <li><img src="{{ asset('img/girl4.png') }}" alt=""></li>
-        <li><img src="{{ asset('img/girl1.png') }}" alt=""></li>
-        <li><img src="{{ asset('img/girl2.png') }}" alt=""></li>
-    </ul> -->
+    <!-- スライドショー -->
 </div>
 
 <div class="content_div_bg">

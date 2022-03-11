@@ -42,5 +42,10 @@ class GoljoController extends Controller
         return view('ranking');
     }
 
+    public function catalog()
+    {
+        return view('catalog');
+    }
+
 
 }

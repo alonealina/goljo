@@ -30,7 +30,7 @@
                     <a href="{{ route('practice') }}" class="header_a">練習場</a>
                     <a href="{{ route('news') }}" class="header_a">ニュース</a>
                     <a href="{{ route('ranking') }}" class="header_a">GOLJO 人気ランキング</a>
-                    <a href="" class="header_a">Fashionカタログ</a>
+                    <a href="{{ route('catalog') }}" class="header_a">Fashionカタログ</a>
                 </div>
             </header>
             <div class="insta_column">
@@ -52,7 +52,7 @@
                     <a href="{{ route('practice') }}" class="footer_a">練習場</a> 　｜　
                     <a href="{{ route('news') }}" class="footer_a">ニュース</a> 　｜　
                     <a href="{{ route('ranking') }}" class="footer_a">GOLJO 人気ランキング</a> 　｜　
-                    <a href="" class="footer_a">Fashionカタログ</a>
+                    <a href="{{ route('catalog') }}" class="footer_a">Fashionカタログ</a>
                 </div>
                 <div class="footer_menu_n">
                     <a href="{{ route('search') }}" class="footer_a">GOLJOサーチ</a> 　｜　
@@ -62,7 +62,7 @@
                     <a href="{{ route('practice') }}" class="footer_a">練習場</a> 　｜　
                     <a href="{{ route('news') }}" class="footer_a">ニュース</a> 　｜　
                     <a href="{{ route('ranking') }}" class="footer_a">GOLJO 人気ランキング</a> 　｜　
-                    <a href="" class="footer_a">Fashionカタログ</a>
+                    <a href="{{ route('catalog') }}" class="footer_a">Fashionカタログ</a>
                 </div>
                 <div class="copyright">2022 ©︎ GOLJO All right.</div>
             </footer>

@@ -185,6 +185,12 @@ select {
     background-image: url(../img/bg1.png);
 }
 
+.content_div_black {
+    padding-top:100px;
+    padding-bottom: 20px;
+    background-color: #3B3B3B;
+}
+
 .main_img {
     margin-top: -130px;
     width: 100%;
@@ -194,7 +200,7 @@ select {
     text-align: center;
 }
 
-.title_black, .title_pink {
+.title_black, .title_pink, .title_white {
     font: normal normal bold 50px/80px Century;
 }
 
@@ -202,13 +208,21 @@ select {
     color: #D93983;
 }
 
+.title_white {
+    color: #fff;
+}
+
 .title_ja {
     font: normal normal 600 16px/16px Open Sans;
     color: #FFACD2;
 }
 
-.title_text2 {
+.title_text2, .title_text_white {
     margin:50px;
+}
+
+.title_text_white {
+    color: #fff;
 }
 
 .top_news_list {
@@ -597,9 +611,105 @@ label {
     font: normal normal 600 14px/14px Open Sans;
 }
 
-
 /* ランキング関連ここまで */
 
+/* カタログ関連 */
+.catalog_title {
+    margin-left:10%;
+    margin-top:100px;
+}
+
+.catalog_black, .catalog_pink {
+    font: normal normal bold 30px/48px serif;
+    letter-spacing: 2.4px;
+}
+
+.catalog_pink {
+    color: #E8247D;
+}
+
+.catalog_list {
+    width:80%;
+    margin:15px auto;
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    -webkit-justify-content: space-between; /* Safari */
+    justify-content:         space-between;
+    flex-wrap : wrap;
+}
+
+.catalog_list_box {
+    width:24%;
+}
+
+.catalog_box_img {
+    width:100%;
+}
+
+.catalog_box_text {
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+.best_item {
+    width:80%;
+    margin:15px auto;
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    flex-wrap : wrap;
+}
+
+.preview_main_img {
+    width:35%;
+    height: fit-content;
+}
+
+.preview_list {
+    width:55%;
+    margin-left: 40px;
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    flex-wrap : wrap;
+}
+
+.preview_list_box1 {
+    width:45%;
+    padding:0 20px 20px 0;
+    border-right:1px solid #262626;
+    border-bottom:1px solid #262626;
+}
+
+.preview_list_box2 {
+    width:45%;
+    padding:0 0 20px 20px;
+    border-left:1px solid #262626;
+    border-bottom:1px solid #262626;
+}
+
+.preview_list_box3 {
+    width:45%;
+    padding:20px 20px 0 0;
+    border-right:1px solid #262626;
+    border-top:1px solid #262626;
+}
+
+.preview_list_box4 {
+    width:45%;
+    padding:20px 0 0 20px;
+    border-left:1px solid #262626;
+    border-top:1px solid #262626;
+}
+
+.preview_list_img {
+    width:100%;
+}
+
+.preview_box_text {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* カタログ関連ここまで */
 .error_message {
     font-size: 15px;
     font-weight: bold;

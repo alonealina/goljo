@@ -9,6 +9,7 @@ Route::get('course', 'App\Http\Controllers\GoljoController@course')->name('cours
 Route::get('practice', 'App\Http\Controllers\GoljoController@practice')->name('practice');
 Route::get('news', 'App\Http\Controllers\GoljoController@news')->name('news');
 Route::get('ranking', 'App\Http\Controllers\GoljoController@ranking')->name('ranking');
+Route::get('catalog', 'App\Http\Controllers\GoljoController@catalog')->name('catalog');
 
 // ユーザーログイン
 Route::get('login', function () { return view('login_user'); });
