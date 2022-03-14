@@ -13,7 +13,13 @@
             <div class="top_news_box">
                 <img src="{{ asset('img/news_img.png') }}" class="top_news_img" alt="">
                 <div class="top_news_content">
+                    @if($news->genre == 1)
                     <div class="info_mark">INFO</div>
+                    @elseif($news->genre == 2)
+                    <div class="golf_mark">GOLF</div>
+                    @elseif($news->genre == 3)
+                    <div class="lady_mark">LADY</div>
+                    @endif
                     <div class="top_news_title">{{ $news->title }}</div>
                     <div class="top_news_text">
                     {!! nl2br(e($news->content)) !!}
@@ -28,7 +34,7 @@
             ニュース検索結果：全 <span class="search_count">{{ $news_list->total() }}</span>
             件中{{ ($news_list->currentPage() -1) * $news_list->perPage() + 1}}～{{ (($news_list->currentPage() -1) * $news_list->perPage() + 1) + (count($news_list) -1) }}件を表示中
         </div>
-        {{ $news_list->links() }}
+        {{ $news_list->links('pagination::default') }}
     </div>
 </div>
 

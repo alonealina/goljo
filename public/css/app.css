@@ -762,3 +762,31 @@ label {
     transition: .6s;
     transition-delay: .8s;
 }
+
+
+/* ページ関連 */
+.active_page, .other_page {
+    border-radius: 5px;
+    width: 40px;
+    text-align: center;
+    line-height: 37px;
+    margin:0 4px;
+}
+
+.active_page {
+    background: #E8247D 0% 0% no-repeat padding-box;
+    color:#fff;
+}
+
+.other_page {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #E0E0E0;
+}
+
+.other_page a {
+    color: #262626;
+}
+
+.page_next_img, .page_prev_img {
+    margin:0 4px;
+}/* ページ関連ここまで */
