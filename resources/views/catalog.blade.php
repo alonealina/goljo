@@ -54,7 +54,7 @@
         </div>
         <div class="preview_list_box4">
             <img src="{{ asset('img/preview4.png') }}" class="catalog_box_img" alt="">
-            <div class="preview_box_text">チェックチャツ</div>
+            <div class="preview_box_text">チェックシャツ</div>
         </div>
     </div>
 </div>

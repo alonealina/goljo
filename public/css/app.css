@@ -235,8 +235,14 @@ select {
     flex-wrap: wrap;
 }
 
-.top_news_box {
+.news_a {
     width:48%;
+    color:#262626;
+    text-decoration: none;
+}
+
+.top_news_box {
+    width:100%;
     margin-top: 30px;
     display: flex;
     background: #FFFFFF 0% 0% no-repeat padding-box;

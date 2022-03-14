@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Category;
+use App\Models\News;
 
 class GoljoController extends Controller
 {
@@ -30,11 +30,6 @@ class GoljoController extends Controller
     public function practice()
     {
         return view('practice');
-    }
-
-    public function news()
-    {
-        return view('news');
     }
 
     public function ranking()
