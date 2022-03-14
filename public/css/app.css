@@ -764,7 +764,7 @@ label {
 }
 
 
-/* ページ関連 */
+/* ページネーション関連 */
 .active_page, .other_page {
     border-radius: 5px;
     width: 40px;
@@ -789,4 +789,18 @@ label {
 
 .page_next_img, .page_prev_img {
     margin:0 4px;
-}/* ページ関連ここまで */
+}/* ページネーション関連ここまで */
+
+/* 詳細ページ関連 */
+.news_detail {
+    width:80%;
+    margin:auto;
+    padding:20px 30px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 3px 3px 3px #00000019;
+    border: 0.9px solid #D0D0D0;
+}
+.news_detail_img {
+    width:100%;
+}
+/* 詳細ページ関連ここまで */
