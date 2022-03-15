@@ -7,12 +7,12 @@
         <div class="title_ja">－　ゴル嬢ニュース　－</div>
         <div class="title_text2">GOLJOからのキャバ嬢・ゴルフ等の関連ニュースやファッションリリース情報をお知らせ！</div>
     </div>
-    <div class="top_news_list">
+    <div class="news_list">
         @foreach ($news_list as $news)
         <a href="{{ route('news.show', ['id' => $news->id]) }}" class="news_a">
-            <div class="top_news_box">
+            <div class="news_list_box">
                 <img src="{{ asset('img/news_img.png') }}" class="top_news_img" alt="">
-                <div class="top_news_content">
+                <div class="news_box_content">
                     @if($news->genre == 1)
                     <div class="info_mark">INFO</div>
                     @elseif($news->genre == 2)

@@ -9,7 +9,10 @@ class GoljoController extends Controller
 {
     public function index()
     {
-        return view('index');
+        $news = News::where('release_flg', 1)->take(4)->get();
+        return view('index', [
+            'news_list' => $news,
+        ]);
     }
 
     public function search()

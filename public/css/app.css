@@ -225,7 +225,7 @@ select {
     color: #fff;
 }
 
-.top_news_list {
+.news_list {
     display: flex;
     justify-content: space-between;
     width:75%;
@@ -241,7 +241,7 @@ select {
     text-decoration: none;
 }
 
-.top_news_box {
+.news_list_box {
     width:100%;
     margin-top: 30px;
     display: flex;
@@ -508,6 +508,7 @@ label {
     box-shadow: 3px 3px 3px #00000019;
     border: 0.9px solid #D0D0D0;
     padding: 20px 30px;
+    color: #262626;
 }
 
 .area_mark {
@@ -792,7 +793,7 @@ label {
 }/* ページネーション関連ここまで */
 
 /* 詳細ページ関連 */
-.news_detail {
+.detail_div {
     width:80%;
     margin:auto;
     padding:20px 30px;
@@ -800,7 +801,112 @@ label {
     box-shadow: 3px 3px 3px #00000019;
     border: 0.9px solid #D0D0D0;
 }
-.news_detail_img {
+
+.detail_img {
     width:100%;
+    margin-bottom: 30px;
 }
+
+.detail_title {
+    font: normal normal 600 40px/40px Open Sans;
+    margin-top:20px;
+}
+
+.detail_content {
+    font: normal normal normal 17px/26px Open Sans;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.news_btn_list {
+    height:50px;
+}
+
+.news_prev_btn {
+    float:left;
+}
+
+.news_next_btn {
+    float:right;
+}
+
+.recent_div {
+    width:78%;
+    margin:100px auto 0 auto;
+}
+
+.recent_black, .recent_pink {
+    font: normal normal bold 30px/48px serif;
+    letter-spacing: 2.4px;
+}
+
+.recent_pink {
+    color: #E8247D;
+}
+
+.recent_list {
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    margin: auto;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.recent_a {
+    width: 48%;
+    color: #262626;
+    text-decoration: none;
+}
+
+.recent_list_box {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 3px 3px 3px #00000019;
+    border: 0.9px solid #D0D0D0;
+    padding: 20px 30px;
+}
+
+.recent_list_img {
+    width: 45%;
+    height: 220px;
+    margin-right: 20px;
+    display: inline-block;
+}
+
+.recent_date {
+    margin:10px 0;
+}
+
+.recent_text {
+    margin-top: 30px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 1130px) {
+    .recent_title {
+        font: normal normal 600 23px/23px Open Sans;
+    }
+}	
+
+@media screen and (max-width: 1129px) {
+    .recent_title {
+        font: normal normal 600 20px/20px Open Sans;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+    }
+    .recent_text {
+        font: normal normal normal 13px/13px Open Sans;
+    }
+}
+
+
 /* 詳細ページ関連ここまで */

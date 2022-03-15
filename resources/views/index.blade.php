@@ -34,57 +34,29 @@
         <div class="title_ja">－　ゴル嬢ニュース　－</div>
         <div class="title_text2">GOLJOからのキャバ嬢・ゴルフ等の関連ニュースやファッションリリース情報をお知らせ！</div>
     </div>
-    <div class="top_news_list">
-        <div class="top_news_box">
-            <img src="{{ asset('img/news_img.png') }}" class="top_news_img" alt="">
-            <div class="top_news_content">
-                <div class="info_mark">INFO</div>
-                <div class="top_news_title">ホームページ開設のお知らせ</div>
-                <div class="top_news_text">
-                    このたび、弊社ホームページを公開させていただきました。<br><br>
-                    お客様におかれましては、より使いやすく、わかりやすいものとなるよう、作成いたしました。<br>
-                    文字数制限テスト文字数制限テスト文字数制限テスト文字数制限テスト文字数制限テスト文字数制限テスト文字数制限テスト文字数制限テスト
+    <div class="news_list">
+    @foreach ($news_list as $news)
+        <a href="{{ route('news.show', ['id' => $news->id]) }}" class="news_a">
+            <div class="news_list_box">
+                <img src="{{ asset('img/news_img.png') }}" class="top_news_img" alt="">
+                <div class="news_box_content">
+                    @if($news->genre == 1)
+                    <div class="info_mark">INFO</div>
+                    @elseif($news->genre == 2)
+                    <div class="golf_mark">GOLF</div>
+                    @elseif($news->genre == 3)
+                    <div class="lady_mark">LADY</div>
+                    @endif
+                    <div class="top_news_title">{{ $news->title }}</div>
+                    <div class="top_news_text">
+                    {!! nl2br(e($news->content)) !!}
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="top_news_box">
-            <img src="{{ asset('img/news_img.png') }}" class="top_news_img" alt="">
-            <div class="top_news_content">
-                <div class="golf_mark">GOLF</div>
-                <div class="top_news_title">ホームページ開設のお知らせ</div>
-                <div class="top_news_text">
-                    このたび、弊社ホームページを公開させていただきました。<br><br>
-                    お客様におかれましては、より使いやすく、わかりやすいものとなるよう、作成いたしました。<br>
-                    文字数制限テスト文字数制限テスト文字数制限テスト文字数制限テスト文字数制限テスト文字数制限テスト文字数制限テスト文字数制限テスト
-                </div>
-            </div>
-        </div>
-        <div class="top_news_box">
-            <img src="{{ asset('img/news_img.png') }}" class="top_news_img" alt="">
-            <div class="top_news_content">
-                <div class="lady_mark">LADY</div>
-                <div class="top_news_title">ホームページ開設のお知らせ</div>
-                <div class="top_news_text">
-                    このたび、弊社ホームページを公開させていただきました。<br><br>
-                    お客様におかれましては、より使いやすく、わかりやすいものとなるよう、作成いたしました。<br>
-                    文字数制限テスト文字数制限テスト文字数制限テスト文字数制限テスト文字数制限テスト文字数制限テスト文字数制限テスト文字数制限テスト
-                </div>
-            </div>
-        </div>
-        <div class="top_news_box">
-            <img src="{{ asset('img/news_img.png') }}" class="top_news_img" alt="">
-            <div class="top_news_content">
-                <div class="lady_mark">LADY</div>
-                <div class="top_news_title">ホームページ開設のお知らせ</div>
-                <div class="top_news_text">
-                    このたび、弊社ホームページを公開させていただきました。<br><br>
-                    お客様におかれましては、より使いやすく、わかりやすいものとなるよう、作成いたしました。<br>
-                    文字数制限テスト文字数制限テスト文字数制限テスト文字数制限テスト文字数制限テスト文字数制限テスト文字数制限テスト文字数制限テスト
-                </div>
-            </div>
-        </div>
+        </a>
+        @endforeach
     </div>
-    <a href=""><img src="{{ asset('img/more_btn.png') }}" class="more_btn" alt=""></a>
+    <a href="{{ route('news') }}"><img src="{{ asset('img/more_btn.png') }}" class="more_btn" alt=""></a>
 </div>
 
 
