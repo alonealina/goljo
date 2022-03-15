@@ -26,7 +26,7 @@
                     @foreach ($element as $page => $url)
                         @if ($page == $paginator->currentPage())
                             <li class="active_page" aria-current="page"><span>{{ $page }}</span></li>
-                        @else
+                        @elseif ($page >= $paginator->currentPage() - 4 && $page <= $paginator->currentPage() + 4)
                             <li class="other_page"><a href="{{ $url }}">{{ $page }}</a></li>
                         @endif
                     @endforeach

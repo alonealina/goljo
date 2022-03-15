@@ -13,6 +13,10 @@ Route::get('event', 'App\Http\Controllers\EventController@index')->name('event')
 Route::get('event/{id}', 'App\Http\Controllers\EventController@show')->name('event.show');
 Route::get('news', 'App\Http\Controllers\NewsController@index')->name('news');
 Route::get('news/{id}', 'App\Http\Controllers\NewsController@show')->name('news.show');
+Route::get('course', 'App\Http\Controllers\CourseController@index')->name('course');
+Route::get('course/{id}', 'App\Http\Controllers\CourseController@show')->name('course.show');
+Route::get('practice', 'App\Http\Controllers\PracticeController@index')->name('practice');
+Route::get('practice/{id}', 'App\Http\Controllers\PracticeController@show')->name('practice.show');
 
 
 // ユーザーログイン

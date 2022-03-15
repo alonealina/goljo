@@ -24,6 +24,7 @@
             イベント検索結果：全 <span class="search_count">{{ $event_list->total() }}</span>
             件中{{ ($event_list->currentPage() -1) * $event_list->perPage() + 1}}～{{ (($event_list->currentPage() -1) * $event_list->perPage() + 1) + (count($event_list) -1) }}件を表示中
         </div>
+        {{ $event_list->links('pagination::default') }}
     </div>
     <div class="search_list2">
         @foreach ($event_list as $event)
@@ -46,6 +47,7 @@
             イベント検索結果：全 <span class="search_count">{{ $event_list->total() }}</span>
             件中{{ ($event_list->currentPage() -1) * $event_list->perPage() + 1}}～{{ (($event_list->currentPage() -1) * $event_list->perPage() + 1) + (count($event_list) -1) }}件を表示中
         </div>
+        {{ $event_list->links('pagination::default') }}
     </div>
 </div>
 
