@@ -6,7 +6,7 @@
     <img src="{{ asset('img/top2.png') }}" class="top_img2" alt="">
     <a href="{{ route('search') }}"><img src="{{ asset('img/search_btn.png') }}" class="search_btn" alt=""></a>
     <img src="{{ asset('img/top3.png') }}" class="top_img3" alt="">
-    <a href=""><img src="{{ asset('img/event_btn.png') }}" class="event_btn" alt=""></a>
+    <a href="{{ route('event') }}"><img src="{{ asset('img/event_btn.png') }}" class="event_btn" alt=""></a>
 </div>
 
 <div class="content_div">

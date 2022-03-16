@@ -70,24 +70,60 @@
     </div>
 
     <div id="registration_sp">
+    @php
+    $now_route = \Route::currentRouteName();
+    @endphp
         <body>
-            <header class="mb-4">
-                @yield('back_button')
-                <div class="cpon_logo_div_sp">
-                    <a href="/">
-                        <img src="{{ asset('img/logo.png') }}" class="cpon_logo_sp" alt="">
-                    </a>
+            <header>
+                <a class="logo_a_sp" href="/">
+                    <img src="{{ asset('img/logo.png') }}" class="logo_img_sp" alt="">
+                </a>
+                <div class="hamburger-menu">
+                    <input type="checkbox" id="menu-btn-check">
+                    <label for="menu-btn-check" class="menu-btn"><span></span></label>
+                    <div class="menu-content">
+                        <ul>
+                            <li>
+                                <a href ="{{ route('search') }}" class="menu_head_sp @if ($now_route == 'search') current @endif">GOLJOサーチ</a>
+                            </li>
+                            <li>
+                                <a href ="" class="menu_content_sp @if ($now_route == 'pickup') current @endif">Pickup GOLJO</a>
+                            </li>
+                            <li>
+                                <a href ="{{ route('event') }}" class="menu_content_sp @if ($now_route == 'event') current @endif">イベント</a>
+                            </li>
+                            <li>
+                                <a href ="{{ route('course') }}" class="menu_content_sp @if ($now_route == 'course') current @endif">オススメGOLF場</a>
+                            </li>
+                            <li>
+                                <a href ="{{ route('practice') }}" class="menu_content_sp @if ($now_route == 'practice') current @endif">練習場</a>
+                            </li>
+                            <li>
+                                <a href ="{{ route('news') }}" class="menu_content_sp @if ($now_route == 'news') current @endif">ニュース</a>
+                            </li>
+                            <li>
+                                <a href ="{{ route('ranking') }}" class="menu_content_sp @if ($now_route == 'ranking') current @endif">GOLJO 人気ランキング</a>
+                            </li>
+                            <li>
+                                <a href ="{{ route('catalog') }}" class="menu_content_sp @if ($now_route == 'catalog') current @endif">Fashionカタログ</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </header>
-
+            <div class="insta_column_sp">
+                <p class="insta_scroll">
+                    インスタグラム随時更新中！アクセスはこちらから！　インスタグラム随時更新中！アクセスはこちらから！　インスタグラム随時更新中！アクセスはこちらから！　
+                </p>
+            </div>
             <div class="body_sp">
             @yield('content_sp')
             </div>
 
-            <footer class="footer_sp">
+            <!-- <footer class="footer_sp">
                 <a href="#page_top">ページTOPへ</a>
                 <div class="copyright_sp">2022 ©︎ GOLJO All right.</div>
-            </footer>
+            </footer> -->
         </body>
     </div>
 
