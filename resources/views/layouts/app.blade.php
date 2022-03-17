@@ -16,7 +16,7 @@
         <link href="{{ asset('css/slick.css') }}" rel="stylesheet">
     </head>
 
-    <div id="registration_pc">
+    <!-- <div id="registration_pc">
         <body>
             <header>
                 <a class="logo_a" href="/">
@@ -67,7 +67,7 @@
                 <div class="copyright">2022 ©︎ GOLJO All right.</div>
             </footer>
         </body>
-    </div>
+    </div> -->
 
     <div id="registration_sp">
     @php
@@ -116,14 +116,23 @@
                     インスタグラム随時更新中！アクセスはこちらから！　インスタグラム随時更新中！アクセスはこちらから！　インスタグラム随時更新中！アクセスはこちらから！　
                 </p>
             </div>
-            <div class="body_sp">
             @yield('content_sp')
-            </div>
 
-            <!-- <footer class="footer_sp">
-                <a href="#page_top">ページTOPへ</a>
-                <div class="copyright_sp">2022 ©︎ GOLJO All right.</div>
-            </footer> -->
+            <footer class="footer_sp">
+                <a href="/"><img src="{{ asset('img/logo2.png') }}" class="footer_logo" alt=""></a>
+                <div class="footer_content_sp">
+                    <a href="{{ route('search') }}" class="footer_a_sp">GOLJOサーチ</a>
+                    <a href="" class="footer_a_sp">Pickup GOLJO</a>
+                    <a href="{{ route('event') }}" class="footer_a_sp">イベント</a>
+                    <a href="{{ route('course') }}" class="footer_a_sp">オススメGOLF場</a>
+                    <a href="{{ route('practice') }}" class="footer_a_sp">練習場</a>
+                    <a href="{{ route('news') }}" class="footer_a_sp">ニュース</a>
+                    <a href="{{ route('ranking') }}" class="footer_a_sp">GOLJO 人気ランキング</a>
+                    <a href="{{ route('catalog') }}" class="footer_a_sp">Fashionカタログ</a>
+
+                </div>
+                <div class="copyright">2022 ©︎ GOLJO All right.</div>
+            </footer>
         </body>
     </div>
 

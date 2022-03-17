@@ -54,7 +54,7 @@
                 </div>
             </div>
         </a>
-        @endforeach
+    @endforeach
     </div>
     <a href="{{ route('news') }}"><img src="{{ asset('img/more_btn.png') }}" class="more_btn" alt=""></a>
 </div>
@@ -121,5 +121,118 @@
     <a href=""><img src="{{ asset('img/more_btn.png') }}" class="more_btn" alt=""></a>
 
 </div>
+
+@endsection
+
+
+@section('content_sp')
+
+<div class="top_content header_padding_sp">
+    <img src="{{ asset('img/top1_sp.png') }}" class="top_img1" alt="">
+    <img src="{{ asset('img/top2_sp.png') }}" class="top_img2" alt="">
+    <a href="{{ route('search') }}"><img src="{{ asset('img/search_btn_sp.png') }}" class="search_btn_sp" alt=""></a>
+    <img src="{{ asset('img/top3_sp.png') }}" class="top_img3_sp" alt="">
+    <a href="{{ route('event') }}"><img src="{{ asset('img/event_btn_sp.png') }}" class="event_btn_sp" alt=""></a>
+</div>
+
+<div class="content_div_sp margin_sp1">
+    <div class="title_text">
+        <span class="title_black_sp">Pickup </span><span class="title_pink_sp">GOLJO</span>
+        <div class="title_ja_sp">－　ピップアップゴル嬢　－</div>
+        <div class="title_text2_sp">
+            GOLJOが自信を持ってオススメする<br>
+            全国の美人キャバ嬢達のフォトグラビアコンテンツ！！<br><br>
+            キャバ嬢グラビアを12件ピックアップして<br>
+            表示しています。
+        </div>
+    </div>
+    <!-- <ul class="slider">
+        <li><img src="{{ asset('img/girl1.png') }}" alt=""></li>
+        <li><img src="{{ asset('img/girl2.png') }}" alt=""></li>
+        <li><img src="{{ asset('img/girl3.png') }}" alt=""></li>
+        <li><img src="{{ asset('img/girl4.png') }}" alt=""></li>
+        <li><img src="{{ asset('img/girl1.png') }}" alt=""></li>
+        <li><img src="{{ asset('img/girl2.png') }}" alt=""></li>
+    </ul> -->
+</div>
+
+<div class="content_div_bg_sp">
+    <div class="title_text">
+        <span class="title_black_sp">New</span><span class="title_pink_sp">s</span>
+        <div class="title_ja_sp">－　ゴル嬢ニュース　－</div>
+        <div class="title_text2_sp">
+            GOLJOからのキャバ嬢・ゴルフ等の関連ニュースや<br>
+            ファッションリリース情報をお知らせ！
+        </div>
+    </div>
+    @foreach ($news_list as $news)
+        <a href="{{ route('news.show', ['id' => $news->id]) }}" class="news_a">
+            <div class="news_list_box_sp">
+                <img src="{{ asset('img/news_img.png') }}" class="top_news_img_sp" alt="">
+                <div class="news_box_content">
+                    @if($news->genre == 1)
+                    <div class="info_mark_sp">INFO</div>
+                    @elseif($news->genre == 2)
+                    <div class="golf_mark_sp">GOLF</div>
+                    @elseif($news->genre == 3)
+                    <div class="lady_mark_sp">LADY</div>
+                    @endif
+                    <div class="top_news_title_sp">{{ $news->title }}</div>
+                    <div class="top_news_text_sp">
+                    {!! nl2br(e($news->content)) !!}
+                    </div>
+                </div>
+            </div>
+        </a>
+    @endforeach
+    <a href="{{ route('news') }}"><img src="{{ asset('img/more_btn_sp.png') }}" class="more_btn_sp" alt=""></a>
+</div>
+
+<div class="content_div_sp">
+    <div class="title_text">
+        <span class="title_pink_sp">GOLJO </span><span class="title_black_sp">Ranking</span>
+        <div class="title_ja_sp">－　ゴル嬢ランキング　－</div>
+        <div class="title_text2_sp">
+            GOLJOに所属しているキャバ嬢達の総ページアクセス<br>
+            ランキング上位4名を表示しています。
+        </div>
+    </div>
+    <div class="top_ranking_list_sp">
+        <div class="top_ranking_content_sp">
+            <img src="{{ asset('img/girl1.png') }}" class="top_ranking_img" alt="">
+            <div class="top_ranking_text_sp"><span class="rank_up_color">↑</span>前回2位</div>
+            <div class="top_ranking_name_sp">丸々 まる子</div>
+        </div>
+        <div class="top_ranking_content_sp">
+            <img src="{{ asset('img/girl2.png') }}" class="top_ranking_img" alt="">
+            <div class="top_ranking_text_sp"><span class="rank_up_color">↑</span>前回56位</div>
+            <div class="top_ranking_name_sp">丸々 まる子</div>
+        </div>
+        <div class="top_ranking_content_sp">
+            <img src="{{ asset('img/girl3.png') }}" class="top_ranking_img" alt="">
+            <div class="top_ranking_text_sp"><span class="rank_down_color">↓</span>前回1位</div>
+            <div class="top_ranking_name_sp">丸々 まる子</div>
+        </div>
+        <div class="top_ranking_content_sp">
+            <img src="{{ asset('img/girl4.png') }}" class="top_ranking_img" alt="">
+            <div class="top_ranking_text_sp"><span class="rank_down_color">↓</span>前回2位</div>
+            <div class="top_ranking_name_sp">丸々 まる子</div>
+        </div>
+    </div>
+    <a href="{{ route('ranking') }}"><img src="{{ asset('img/more_btn_sp.png') }}" class="more_btn_sp" alt=""></a>
+</div>
+
+<div class="content_div_bg_sp">
+    <div class="title_text">
+        <span class="title_black_sp">Fashion </span><span class="title_pink_sp">Catalog</span>
+        <div class="title_ja_sp">－　ファッションカタログ　－</div>
+        <div class="title_text2_sp">
+        GOLJOが自信を持ってオススメする全国の美人キャバ嬢達の<br>
+        ファッションフォトコンテンツ！！
+        </div>
+    </div>
+    <a href="{{ route('catalog') }}"><img src="{{ asset('img/more_btn_sp.png') }}" class="more_btn_sp" alt=""></a>
+</div>
+
 
 @endsection
