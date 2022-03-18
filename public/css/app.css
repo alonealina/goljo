@@ -35,6 +35,10 @@ header {
     padding-top:83px;
 }
 
+.header_margin_sp {
+    margin-top: 83px;
+}
+
 footer {
     padding-top: 30px;
     padding-bottom:10px;
@@ -272,6 +276,10 @@ select {
     width: 100%;
 }
 
+.main_img_sp {
+    width: 100%;
+}
+
 .title_text {
     text-align: center;
 }
@@ -330,6 +338,11 @@ select {
     text-decoration: none;
 }
 
+.box_a_sp {
+    color:#262626;
+    text-decoration: none;
+}
+
 .news_list_box {
     width:100%;
     margin-top: 30px;
@@ -340,7 +353,14 @@ select {
     padding:20px 30px;
 }
 
-.news_list_box_sp {
+.top_news_img {
+    width:45%;
+    height:220px;
+    margin-right: 20px;
+    display: inline-block;
+}
+
+.list_box_sp {
     margin: 10px 30px;
     display: flex;
     background: #FFFFFF 0% 0% no-repeat padding-box;
@@ -349,18 +369,32 @@ select {
     padding:10px;
 }
 
-.top_news_img {
-    width:45%;
-    height:220px;
-    margin-right: 20px;
-    display: inline-block;
-}
-
-.top_news_img_sp {
+.box_img_sp {
     width:40%;
     height:120px;
     margin-right: 10px;
     display: inline-block;
+}
+
+.box_title_sp {
+    font: normal normal 600 11px/11px Open Sans;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+.box_text_sp {
+    font: normal normal normal 9px/13px Open Sans;
+    margin-top: 10px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    overflow: hidden;
+}
+
+.box_date_sp {
+    font: normal normal normal 8px/16px Open Sans;
 }
 
 .info_mark, .golf_mark, .lady_mark {
@@ -376,7 +410,6 @@ select {
 
 .info_mark_sp, .golf_mark_sp, .lady_mark_sp {
     border-radius: 3px;
-    /* margin-top: 15px; */
     margin-bottom: 3px;
     width: 36px;
     height: 11px;
@@ -436,23 +469,6 @@ select {
     .top_news_text {
         font: normal normal normal 13px/13px Open Sans;
     }
-}
-
-.top_news_title_sp {
-    font: normal normal 600 11px/11px Open Sans;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    overflow: hidden;
-}
-
-.top_news_text_sp {
-    font: normal normal normal 9px/13px Open Sans;
-    margin-top: 10px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 6;
-    overflow: hidden;
 }
 
 .top_ranking_list {
@@ -585,6 +601,14 @@ select {
     font: normal normal normal 27px/30px Open Sans;
 }
 
+.search_counter_sp {
+    text-align: center;
+}
+
+.search_count_sp {
+    font: normal normal normal 18px/20px Open Sans;
+}
+
 .search_list_item {
     width: 18%;
     padding-bottom: 20px;
@@ -639,8 +663,19 @@ label {
     margin:auto;
 }
 
+.search_form_sp {
+    margin: 5%;
+}
+
 .select_name2 {
     width: 100%;
+}
+
+.select_sp {
+    width: 100%;
+    height: 50px;
+    font: normal normal 600 12px/18px Open Sans;
+    background-image: url(../img/select_bg_sp.png);
 }
 
 .page_div, .page_div_news {
@@ -677,6 +712,18 @@ label {
     width: 60px;
     height: 17px;
     font: normal normal 600 11px/16px Open Sans;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.area_mark_sp {
+    background: #646464 0% 0% no-repeat padding-box;
+    border-radius: 3px;
+    margin-bottom: 3px;
+    width: 50px;
+    height: 14px;
+    padding-top: 2px;
+    font: normal normal 600 9px/11px Open Sans;
     color: #FFFFFF;
     text-align: center;
 }
@@ -739,8 +786,7 @@ label {
 
 /* ランキング関連 */
 
-.ranking_list {
-    width:75%;
+.ranking_list, .ranking_list_sp {
     margin:auto;
     display: -webkit-flex; /* Safari */
     display: flex;
@@ -749,8 +795,21 @@ label {
     flex-wrap : wrap;
 }
 
+.ranking_list {
+    width:75%;
+}
+
+.ranking_list_sp {
+    width:90%;
+}
+
 .ranking_list_item {
     width: 18%;
+    padding-bottom: 20px;
+}
+
+.ranking_list_item_sp {
+    width: 48%;
     padding-bottom: 20px;
 }
 
@@ -765,6 +824,13 @@ label {
     width: 20%;
 }
 
+.rank_mark_sp {
+    bottom: 78%;
+    left: 3%;
+    position: relative;
+    width: 20%;
+}
+
 .ranking_list_name {
     text-align: center;
     font: normal normal 600 16px/16px Open Sans;
@@ -772,9 +838,21 @@ label {
     margin-bottom: 12px;
 }
 
+.ranking_list_name_sp {
+    text-align: center;
+    font: normal normal 600 11px/11px Open Sans;
+    margin-top: -25px;
+    margin-bottom: 12px;
+}
+
 .ranking_list_area {
     text-align: center;
     font: normal normal 600 14px/14px Open Sans;
+}
+
+.ranking_list_area_sp {
+    text-align: center;
+    font: normal normal 600 10px/10px Open Sans;
 }
 
 /* ランキング関連ここまで */
@@ -933,23 +1011,40 @@ label {
     margin:0 4px;
 }
 
-.active_page {
+.active_page_sp, .other_page_sp {
+    border-radius: 5px;
+    width: 40px;
+    text-align: center;
+    line-height: 29px;
+    margin:0 4px;
+}
+
+.active_page, .active_page_sp {
     background: #E8247D 0% 0% no-repeat padding-box;
     color:#fff;
 }
 
-.other_page {
+.other_page, .other_page_sp {
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 1px solid #E0E0E0;
 }
 
-.other_page a {
+.other_page a, .other_page_sp a {
     color: #262626;
 }
 
 .page_next_img, .page_prev_img {
     margin:0 4px;
-}/* ページネーション関連ここまで */
+}
+
+.page_next_img_sp, .page_prev_img_sp {
+    margin:0 2px;
+}
+
+.page_img_sp {
+    width:80px;
+}
+/* ページネーション関連ここまで */
 
 /* 詳細ページ関連 */
 .detail_div {

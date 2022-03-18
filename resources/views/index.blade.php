@@ -166,9 +166,9 @@
         </div>
     </div>
     @foreach ($news_list as $news)
-        <a href="{{ route('news.show', ['id' => $news->id]) }}" class="news_a">
-            <div class="news_list_box_sp">
-                <img src="{{ asset('img/news_img.png') }}" class="top_news_img_sp" alt="">
+        <a href="{{ route('news.show', ['id' => $news->id]) }}" class="box_a_sp">
+            <div class="list_box_sp">
+                <img src="{{ asset('img/news_img.png') }}" class="box_img_sp" alt="">
                 <div class="news_box_content">
                     @if($news->genre == 1)
                     <div class="info_mark_sp">INFO</div>
@@ -177,8 +177,8 @@
                     @elseif($news->genre == 3)
                     <div class="lady_mark_sp">LADY</div>
                     @endif
-                    <div class="top_news_title_sp">{{ $news->title }}</div>
-                    <div class="top_news_text_sp">
+                    <div class="box_title_sp">{{ $news->title }}</div>
+                    <div class="box_text_sp">
                     {!! nl2br(e($news->content)) !!}
                     </div>
                 </div>
