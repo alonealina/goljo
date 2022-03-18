@@ -81,7 +81,7 @@
     </div>
     {{ $course_list->links('pagination::default_sp') }}
     @foreach ($course_list as $course)
-        <a href="{{ route('event.show', ['id' => $course->id]) }}" class="box_a_sp">
+        <a href="{{ route('course.show', ['id' => $course->id]) }}" class="box_a_sp">
             <div class="list_box_sp">
                 <img src="{{ asset('img/course_img.png') }}" class="box_img_sp" alt="">
                 <div class="news_box_content">

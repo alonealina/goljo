@@ -11,7 +11,7 @@
 
 <!-- スライドショー -->
 <div class="catalog_title">
-    <span class="catalog_pink">COORDINATE</span><span class="catalog_black">一覧</span>
+    <span class="serif_pink">COORDINATE</span><span class="serif_black">一覧</span>
 </div>
 
 <div class="catalog_list">
@@ -34,7 +34,7 @@
 </div>
 
 <div class="catalog_title">
-    <span class="catalog_pink">ベスト</span><span class="catalog_black">アイテム</span>
+    <span class="serif_pink">ベスト</span><span class="serif_black">アイテム</span>
 </div>
 
 <div class="best_item">

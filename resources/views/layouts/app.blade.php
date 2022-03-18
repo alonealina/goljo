@@ -16,7 +16,8 @@
         <link href="{{ asset('css/slick.css') }}" rel="stylesheet">
     </head>
 
-    <!-- <div id="registration_pc">
+    @if(!$isMobile)
+    <div id="registration_pc">
         <body>
             <header>
                 <a class="logo_a" href="/">
@@ -67,8 +68,9 @@
                 <div class="copyright">2022 ©︎ GOLJO All right.</div>
             </footer>
         </body>
-    </div> -->
+    </div>
 
+    @else
     <div id="registration_sp">
     @php
     $now_route = \Route::currentRouteName();
@@ -84,28 +86,28 @@
                     <div class="menu-content">
                         <ul>
                             <li>
-                                <a href ="{{ route('search') }}" class="menu_head_sp @if ($now_route == 'search') current @endif">GOLJOサーチ</a>
+                                <a href ="{{ route('search') }}" class="menu_head_sp @if (strpos($now_route,'search') !== false) current @endif">GOLJOサーチ</a>
                             </li>
                             <li>
-                                <a href ="" class="menu_content_sp @if ($now_route == 'pickup') current @endif">Pickup GOLJO</a>
+                                <a href ="" class="menu_content_sp @if (strpos($now_route,'pickup') !== false) current @endif">Pickup GOLJO</a>
                             </li>
                             <li>
-                                <a href ="{{ route('event') }}" class="menu_content_sp @if ($now_route == 'event') current @endif">イベント</a>
+                                <a href ="{{ route('event') }}" class="menu_content_sp @if (strpos($now_route,'event') !== false) current @endif">イベント</a>
                             </li>
                             <li>
-                                <a href ="{{ route('course') }}" class="menu_content_sp @if ($now_route == 'course') current @endif">オススメGOLF場</a>
+                                <a href ="{{ route('course') }}" class="menu_content_sp @if (strpos($now_route,'course') !== false) current @endif">オススメGOLF場</a>
                             </li>
                             <li>
-                                <a href ="{{ route('practice') }}" class="menu_content_sp @if ($now_route == 'practice') current @endif">練習場</a>
+                                <a href ="{{ route('practice') }}" class="menu_content_sp @if (strpos($now_route,'practice') !== false) current @endif">練習場</a>
                             </li>
                             <li>
-                                <a href ="{{ route('news') }}" class="menu_content_sp @if ($now_route == 'news') current @endif">ニュース</a>
+                                <a href ="{{ route('news') }}" class="menu_content_sp @if (strpos($now_route,'news') !== false) current @endif">ニュース</a>
                             </li>
                             <li>
-                                <a href ="{{ route('ranking') }}" class="menu_content_sp @if ($now_route == 'ranking') current @endif">GOLJO 人気ランキング</a>
+                                <a href ="{{ route('ranking') }}" class="menu_content_sp @if (strpos($now_route,'ranking') !== false) current @endif">GOLJO 人気ランキング</a>
                             </li>
                             <li>
-                                <a href ="{{ route('catalog') }}" class="menu_content_sp @if ($now_route == 'catalog') current @endif">Fashionカタログ</a>
+                                <a href ="{{ route('catalog') }}" class="menu_content_sp @if (strpos($now_route,'catalog') !== false) current @endif">Fashionカタログ</a>
                             </li>
                         </ul>
                     </div>
@@ -135,6 +137,7 @@
             </footer>
         </body>
     </div>
+    @endif
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
