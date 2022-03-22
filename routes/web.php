@@ -9,6 +9,7 @@ Route::get('practice', 'App\Http\Controllers\GoljoController@practice')->name('p
 Route::get('ranking', 'App\Http\Controllers\GoljoController@ranking')->name('ranking');
 Route::get('catalog', 'App\Http\Controllers\GoljoController@catalog')->name('catalog');
 
+Route::get('girl/{id}', 'App\Http\Controllers\GirlController@show')->name('girl.show');
 Route::get('event', 'App\Http\Controllers\EventController@index')->name('event');
 Route::get('event/{id}', 'App\Http\Controllers\EventController@show')->name('event.show');
 Route::get('news', 'App\Http\Controllers\NewsController@index')->name('news');

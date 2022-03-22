@@ -25,7 +25,7 @@
                 </a>
                 <div class="header_menu">
                     <a href="{{ route('search') }}" class="header_a">GOLJOサーチ</a>
-                    <a href="" class="header_a">Pickup GOLJO</a>
+                    <a href="/#pickup" class="header_a">Pickup GOLJO</a>
                     <a href="{{ route('event') }}" class="header_a">イベント</a>
                     <a href="{{ route('course') }}" class="header_a">オススメGOLF場</a>
                     <a href="{{ route('practice') }}" class="header_a">練習場</a>
@@ -47,7 +47,7 @@
                 <a href="/"><img src="{{ asset('img/logo2.png') }}" class="footer_logo" alt=""></a>
                 <div class="footer_menu">
                     <a href="{{ route('search') }}" class="footer_a">GOLJOサーチ</a> 　｜　
-                    <a href="" class="footer_a">Pickup GOLJO</a> 　｜　
+                    <a href="/#pickup" class="footer_a">Pickup GOLJO</a> 　｜　
                     <a href="{{ route('event') }}" class="footer_a">イベント</a> 　｜　
                     <a href="{{ route('course') }}" class="footer_a">オススメGOLF場</a> 　｜　
                     <a href="{{ route('practice') }}" class="footer_a">練習場</a> 　｜　
@@ -57,7 +57,7 @@
                 </div>
                 <div class="footer_menu_n">
                     <a href="{{ route('search') }}" class="footer_a">GOLJOサーチ</a> 　｜　
-                    <a href="" class="footer_a">Pickup GOLJO</a> 　｜　
+                    <a href="/#pickup" class="footer_a">Pickup GOLJO</a> 　｜　
                     <a href="{{ route('event') }}" class="footer_a">イベント</a> 　｜　
                     <a href="{{ route('course') }}" class="footer_a">オススメGOLF場</a>
                     <a href="{{ route('practice') }}" class="footer_a">練習場</a> 　｜　
@@ -89,7 +89,7 @@
                                 <a href ="{{ route('search') }}" class="menu_head_sp @if (strpos($now_route,'search') !== false) current @endif">GOLJOサーチ</a>
                             </li>
                             <li>
-                                <a href ="" class="menu_content_sp @if (strpos($now_route,'pickup') !== false) current @endif">Pickup GOLJO</a>
+                                <a href ="/#pickup" class="menu_content_sp @if (strpos($now_route,'pickup') !== false) current @endif">Pickup GOLJO</a>
                             </li>
                             <li>
                                 <a href ="{{ route('event') }}" class="menu_content_sp @if (strpos($now_route,'event') !== false) current @endif">イベント</a>
@@ -124,7 +124,7 @@
                 <a href="/"><img src="{{ asset('img/logo2.png') }}" class="footer_logo" alt=""></a>
                 <div class="footer_content_sp">
                     <a href="{{ route('search') }}" class="footer_a_sp">GOLJOサーチ</a>
-                    <a href="" class="footer_a_sp">Pickup GOLJO</a>
+                    <a href="/#pickup" class="footer_a_sp">Pickup GOLJO</a>
                     <a href="{{ route('event') }}" class="footer_a_sp">イベント</a>
                     <a href="{{ route('course') }}" class="footer_a_sp">オススメGOLF場</a>
                     <a href="{{ route('practice') }}" class="footer_a_sp">練習場</a>
@@ -141,8 +141,8 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/slick.js') }}"></script>
+    <script src="{{ asset('js/girl.js') }}"></script>
     <script type="text/javascript">
     if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') == -1) 
         || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {

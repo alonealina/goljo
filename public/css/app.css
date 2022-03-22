@@ -27,6 +27,11 @@ header {
     z-index: 9000;
 }
 
+a {
+    color:#262626;
+    text-decoration: none;
+}
+
 .header_margin {
     margin-top:139px;
 }
@@ -491,7 +496,7 @@ select {
     width:25%;
 }
 
-.top_ranking_img {
+.top_ranking_img, .girl_list_img {
     width: 100%;
 }
 
@@ -618,13 +623,13 @@ select {
     width: 100%;
 }
 
-.search_list_name {
+.search_list_name, .girl_list_name {
     font: normal normal 600 16px/16px Open Sans;
     margin-top: 10px;
     margin-bottom: 12px;
 }
 
-.search_list_area {
+.search_list_area, .girl_list_area {
     font: normal normal 600 14px/14px Open Sans;
 }
 
@@ -1207,6 +1212,109 @@ label {
     .recent_text {
         font: normal normal normal 13px/13px Open Sans;
     }
+}
+
+.girl_img_div {
+    width:80%;
+    margin:auto;
+}
+
+.girl_detail_img {
+    width: 100%;
+}
+
+.girl_tmb {
+    width: 33%;
+}
+
+.girl_tmb_list {
+    width:100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.girl_name {
+    margin-top: 50px;
+    text-align: center;
+    font: normal normal bold 30px/30px Century;
+}
+
+.girl_name_r {
+    margin-top: 20px;
+    text-align: center;
+    font: normal normal 600 14px/16px Open Sans;
+    color: #FFACD2;
+}
+
+.girl_profile_div {
+    display: flex;
+    justify-content: space-between;
+    width:70%;
+    flex-wrap: wrap;
+    margin:auto;
+}
+
+.girl_profile_box {
+    margin-top:20px;
+    width:30%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.girl_profile_q {
+    text-decoration: underline;
+}
+
+.girl_profile_a {
+    width:100px;
+    border-bottom: 1px solid #C4C4C4;
+}
+
+.girl_profile_black {
+    display: flex;
+    justify-content: space-between;
+    width:70%;
+    flex-wrap: wrap;
+    margin:50px auto;
+    background-color: #3B3B3B;
+    padding:70px 40px;
+    color: #FFFFFF;
+}
+
+.girl_fav_title {
+    width:30%;
+    text-decoration: underline;
+    text-decoration-color: #C4C4C4;
+}
+
+.girl_fav_content {
+    margin-top: 20px;
+    width:30%;
+}
+
+.girl_sns {
+    margin-top:20px;
+    display: flex;
+    justify-content: space-between;
+    width:20%;
+    margin:auto;
+}
+
+.girl_title {
+    margin-left: 15%;
+    margin-top: 100px;
+}
+
+.girl_list {
+    display: flex;
+    width: 70%;
+    margin: auto;
+}
+
+.girl_content {
+    width:25%;
+    text-align: center;
 }
 
 /* 詳細ページ関連ここまで */

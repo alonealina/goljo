@@ -6,7 +6,7 @@
     <img src="{{ asset('img/top2.png') }}" class="top_img2" alt="">
     <a href="{{ route('search') }}"><img src="{{ asset('img/search_btn.png') }}" class="search_btn" alt=""></a>
     <img src="{{ asset('img/top3.png') }}" class="top_img3" alt="">
-    <a href="{{ route('event') }}"><img src="{{ asset('img/event_btn.png') }}" class="event_btn" alt=""></a>
+    <a href="{{ route('event') }}" id="pickup"><img src="{{ asset('img/event_btn.png') }}" class="event_btn" alt=""></a>
 </div>
 
 <div class="content_div">
@@ -70,10 +70,12 @@
     </div>
     <div class="top_ranking_list">
         <div class="top_ranking_content">
-            <img src="{{ asset('img/girl1.png') }}" class="top_ranking_img" alt="">
-            <img src="{{ asset('img/rank1.png') }}" class="top_rank_mark" alt="">
-            <div class="top_ranking_text"><span class="rank_up_color">↑</span>前回2位</div>
-            <div class="top_ranking_name">丸々 まる子</div>
+            <a href="{{ route('girl.show', ['id' => 1 ]) }}">
+                <img src="{{ asset('img/girl1.png') }}" class="top_ranking_img" alt="">
+                <img src="{{ asset('img/rank1.png') }}" class="top_rank_mark" alt="">
+                <div class="top_ranking_text"><span class="rank_up_color">↑</span>前回2位</div>
+                <div class="top_ranking_name">丸々 まる子</div>
+            </a>
         </div>
         <div class="top_ranking_content">
             <img src="{{ asset('img/girl2.png') }}" class="top_ranking_img" alt="">
@@ -100,7 +102,7 @@
             <div class="top_ranking_name">丸々 まる子</div>
         </div>
     </div>
-    <a href=""><img src="{{ asset('img/more_btn.png') }}" class="more_btn" alt=""></a>
+    <a href="{{ route('ranking') }}"><img src="{{ asset('img/more_btn.png') }}" class="more_btn" alt=""></a>
 
 </div>
 
@@ -118,7 +120,7 @@
         <li><img src="{{ asset('img/catalog1.png') }}" alt=""></li>
         <li><img src="{{ asset('img/catalog2.png') }}" alt=""></li>
     </ul>
-    <a href=""><img src="{{ asset('img/more_btn.png') }}" class="more_btn" alt=""></a>
+    <a href="{{ route('catalog') }}"><img src="{{ asset('img/more_btn.png') }}" class="more_btn" alt=""></a>
 
 </div>
 
@@ -132,7 +134,7 @@
     <img src="{{ asset('img/top2_sp.png') }}" class="top_img2" alt="">
     <a href="{{ route('search') }}"><img src="{{ asset('img/search_btn_sp.png') }}" class="search_btn_sp" alt=""></a>
     <img src="{{ asset('img/top3_sp.png') }}" class="top_img3_sp" alt="">
-    <a href="{{ route('event') }}"><img src="{{ asset('img/event_btn_sp.png') }}" class="event_btn_sp" alt=""></a>
+    <a href="{{ route('event') }}" id="pickup"><img src="{{ asset('img/event_btn_sp.png') }}" class="event_btn_sp" alt=""></a>
 </div>
 
 <div class="content_div_sp margin_sp1">
