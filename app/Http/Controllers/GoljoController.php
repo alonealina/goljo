@@ -4,14 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\News;
+use App\Models\Girl;
 
 class GoljoController extends Controller
 {
     public function index()
     {
-        $news = News::where('release_flg', 1)->take(4)->get();
+        $news_list = News::where('release_flg', 1)->take(4)->get();
+        $girl_rank = Girl::orderBy('fav_count', 'desc')->take(5)->get();
         return view('index', [
-            'news_list' => $news,
+            'news_list' => $news_list,
+            'girl_rank' => $girl_rank,
         ]);
     }
 
@@ -37,7 +40,11 @@ class GoljoController extends Controller
 
     public function ranking()
     {
-        return view('ranking');
+        $girl_rank = Girl::orderBy('fav_count', 'desc')->take(10)->get();
+
+        return view('ranking', [
+            'girl_rank' => $girl_rank,
+        ]);
     }
 
     public function catalog()

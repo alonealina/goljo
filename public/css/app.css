@@ -32,6 +32,12 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color:#505050;
+    text-decoration: none;
+    opacity:0.7;
+}
+
 .header_margin {
     margin-top:139px;
 }
@@ -791,7 +797,7 @@ label {
 
 /* ランキング関連 */
 
-.ranking_list, .ranking_list_sp {
+.ranking_list, .ranking_list_sp, .girl_list_sp {
     margin:auto;
     display: -webkit-flex; /* Safari */
     display: flex;
@@ -804,7 +810,7 @@ label {
     width:75%;
 }
 
-.ranking_list_sp {
+.ranking_list_sp, .girl_list_sp {
     width:90%;
 }
 
@@ -813,7 +819,7 @@ label {
     padding-bottom: 20px;
 }
 
-.ranking_list_item_sp {
+.ranking_list_item_sp, .girl_profile_item_sp {
     width: 48%;
     padding-bottom: 20px;
 }
@@ -850,12 +856,19 @@ label {
     margin-bottom: 12px;
 }
 
+.girl_list_name_sp {
+    text-align: center;
+    font: normal normal 600 11px/11px Open Sans;
+    margin-top: 20px;
+    margin-bottom: 12px;
+}
+
 .ranking_list_area {
     text-align: center;
     font: normal normal 600 14px/14px Open Sans;
 }
 
-.ranking_list_area_sp {
+.ranking_list_area_sp, .girl_list_area_sp {
     text-align: center;
     font: normal normal 600 10px/10px Open Sans;
 }
@@ -1247,6 +1260,19 @@ label {
     color: #FFACD2;
 }
 
+.girl_name_sp {
+    margin-top: 20px;
+    text-align: center;
+    font: normal normal bold 20px/20px Century;
+}
+
+.girl_name_r_sp {
+    margin-top: 10px;
+    text-align: center;
+    font: normal normal 600 10px/10px Open Sans;
+    color: #FFACD2;
+}
+
 .girl_profile_div {
     display: flex;
     justify-content: space-between;
@@ -1255,9 +1281,25 @@ label {
     margin:auto;
 }
 
+.girl_profile_div_sp {
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    margin:20px 0 40px 7%;
+    font: normal normal normal 16px/16px Open Sans;
+}
+
+
 .girl_profile_box {
     margin-top:20px;
     width:30%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.girl_profile_box_sp {
+    margin-top:20px;
+    width:100%;
     display: flex;
     justify-content: space-between;
 }
@@ -1282,6 +1324,14 @@ label {
     color: #FFFFFF;
 }
 
+.girl_profile_black_sp {
+    width:100%;
+    background-color: #3B3B3B;
+    padding:40px 0px 40px 80px;
+    font: normal normal normal 18px/27px Open Sans;
+    color: #FFFFFF;
+}
+
 .girl_fav_title {
     width:30%;
     text-decoration: underline;
@@ -1294,16 +1344,27 @@ label {
 }
 
 .girl_sns {
-    margin-top:20px;
     display: flex;
     justify-content: space-between;
     width:20%;
-    margin:auto;
+    margin:20px auto 0 auto;
+}
+
+.girl_sns_sp {
+    display: flex;
+    justify-content: space-between;
+    width:70%;
+    margin:20px auto 0 auto;
 }
 
 .girl_title {
     margin-left: 15%;
     margin-top: 100px;
+}
+
+.girl_title_sp {
+    margin-left: 5%;
+    margin-top: 30px;
 }
 
 .girl_list {
