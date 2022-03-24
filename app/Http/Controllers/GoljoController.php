@@ -10,10 +10,12 @@ class GoljoController extends Controller
 {
     public function index()
     {
-        $news_list = News::where('release_flg', 1)->take(4)->get();
+        $news_list = News::where('release_flg', 1)->orderBy('notice_date', 'desc')->take(4)->get();
+        $pickup = Girl::where('pickup_flg', 1)->take(12)->get();
         $girl_rank = Girl::orderBy('fav_count', 'desc')->take(5)->get();
         return view('index', [
             'news_list' => $news_list,
+            'pickup' => $pickup,
             'girl_rank' => $girl_rank,
         ]);
     }

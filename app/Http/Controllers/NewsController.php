@@ -11,7 +11,7 @@ class NewsController extends Controller
 {
     public function index()
     {
-        $news = News::where('release_flg', 1)->paginate(10);
+        $news = News::where('release_flg', 1)->orderBy('notice_date', 'desc')->paginate(10);
         return view('news/index', [
             'news_list' => $news,
         ]);

@@ -12,11 +12,14 @@ class GirlController extends Controller
     public function show($id)
     {
         $girl = Girl::find($id);
-
-        // $event_list = Girl::where('release_flg', 1)->orderBy('notice_date', 'desc')->orderBy('title', 'asc')->take(4)->get();
+        $pref = $girl->pref;
+        $nearby_girls = Girl::where('pref', $pref)->where('id', '<>', $id)->orderBy('fav_count', 'desc')->take(4)->get();
+        $pickup_girls = Girl::where('pickup_flg', 1)->orderBy('fav_count', 'desc')->take(4)->get();
 
         return view('girl/show', [
             'girl' => $girl,
+            'nearby_girls' => $nearby_girls,
+            'pickup_girls' => $pickup_girls,
         ]);
     }
 

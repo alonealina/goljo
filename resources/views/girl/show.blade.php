@@ -20,7 +20,7 @@
             <div class="girl_profile_a">{{ $girl->height }} cm</div>
         </div>
         <div class="girl_profile_box">
-            <div class="girl_profile_q">足のサイズ</div>
+            <div class="girl_profile_q">シューズサイズ</div>
             <div class="girl_profile_a">{{ $girl->foot_size }} cm</div>
         </div>
         <div class="girl_profile_box">
@@ -66,52 +66,30 @@
         <span class="serif_pink">同じエリア</span><span class="serif_black">の女の子</span>
     </div>
     <div class="girl_list">
+        @foreach ($nearby_girls as $nearby_girl)
         <div class="girl_content">
-            <img src="{{ asset('img/girl1.png') }}" class="girl_list_img" alt="">
-            <div class="girl_list_name">丸々 まる子</div>
-            <div class="girl_list_area">キャバクラ 〇〇店</div>
+            <a href="{{ route('girl.show', ['id' => $nearby_girl->id ]) }}">
+                <img src="{{ asset('img/girl1.png') }}" class="girl_list_img" alt="">
+                <div class="girl_list_name">{{ $nearby_girl->name }}</div>
+                <div class="girl_list_area">{{ $nearby_girl->kyaba_name }}</div>
+            </a>
         </div>
-        <div class="girl_content">
-            <img src="{{ asset('img/girl2.png') }}" class="girl_list_img" alt="">
-            <div class="girl_list_name">丸々 まる子</div>
-            <div class="girl_list_area">キャバクラ 〇〇店</div>
-        </div>
-        <div class="girl_content">
-            <img src="{{ asset('img/girl3.png') }}" class="girl_list_img" alt="">
-            <div class="girl_list_name">丸々 まる子</div>
-            <div class="girl_list_area">キャバクラ 〇〇店</div>
-        </div>
-        <div class="girl_content">
-            <img src="{{ asset('img/girl4.png') }}" class="girl_list_img" alt="">
-            <div class="girl_list_name">丸々 まる子</div>
-            <div class="girl_list_area">キャバクラ 〇〇店</div>
-        </div>
+        @endforeach
     </div>
 
     <div class="girl_title">
         <span class="serif_pink">今注目</span><span class="serif_black">の女の子</span>
     </div>
     <div class="girl_list">
+        @foreach ($pickup_girls as $pickup_girl)
         <div class="girl_content">
-            <img src="{{ asset('img/girl1.png') }}" class="girl_list_img" alt="">
-            <div class="girl_list_name">丸々 まる子</div>
-            <div class="girl_list_area">キャバクラ 〇〇店</div>
+            <a href="{{ route('girl.show', ['id' => $pickup_girl->id ]) }}">
+                <img src="{{ asset('img/girl4.png') }}" class="girl_list_img" alt="">
+                <div class="girl_list_name">{{ $pickup_girl->name }}</div>
+                <div class="girl_list_area">{{ $pickup_girl->kyaba_name }}</div>
+            </a>
         </div>
-        <div class="girl_content">
-            <img src="{{ asset('img/girl2.png') }}" class="girl_list_img" alt="">
-            <div class="girl_list_name">丸々 まる子</div>
-            <div class="girl_list_area">キャバクラ 〇〇店</div>
-        </div>
-        <div class="girl_content">
-            <img src="{{ asset('img/girl3.png') }}" class="girl_list_img" alt="">
-            <div class="girl_list_name">丸々 まる子</div>
-            <div class="girl_list_area">キャバクラ 〇〇店</div>
-        </div>
-        <div class="girl_content">
-            <img src="{{ asset('img/girl4.png') }}" class="girl_list_img" alt="">
-            <div class="girl_list_name">丸々 まる子</div>
-            <div class="girl_list_area">キャバクラ 〇〇店</div>
-        </div>
+        @endforeach
     </div>
 </div>
 
@@ -136,7 +114,7 @@
             <div class="girl_profile_a">{{ $girl->height }} cm</div>
         </div>
         <div class="girl_profile_box_sp">
-            <div class="girl_profile_q">足のサイズ</div>
+            <div class="girl_profile_q">シューズサイズ</div>
             <div class="girl_profile_a">{{ $girl->foot_size }} cm</div>
         </div>
         <div class="girl_profile_box_sp">
@@ -182,26 +160,15 @@
         <span class="serif_pink_sp">同じエリア</span><span class="serif_black_sp">の女の子</span>
     </div>
     <div class="girl_list_sp">
+        @foreach ($nearby_girls as $nearby_girl)
         <div class="girl_profile_item_sp">
-            <img src="{{ asset('img/search1.png') }}" class="girl_list_img" alt="">
-            <div class="girl_list_name_sp">丸々 まる子</div>
-            <div class="girl_list_area_sp">キャバクラ 〇〇店</div>
+            <a href="{{ route('girl.show', ['id' => $nearby_girl->id ]) }}">
+                <img src="{{ asset('img/search1.png') }}" class="girl_list_img" alt="">
+                <div class="girl_list_name_sp">{{ $nearby_girl->name }}</div>
+                <div class="girl_list_area_sp">{{ $nearby_girl->kyaba_name }}</div>
+            </a>
         </div>
-        <div class="girl_profile_item_sp">
-            <img src="{{ asset('img/search2.png') }}" class="girl_list_img" alt="">
-            <div class="girl_list_name_sp">丸々 まる子</div>
-            <div class="girl_list_area_sp">キャバクラ 〇〇店</div>
-        </div>
-        <div class="girl_profile_item_sp">
-            <img src="{{ asset('img/search3.png') }}" class="girl_list_img" alt="">
-            <div class="girl_list_name_sp">丸々 まる子</div>
-            <div class="girl_list_area_sp">キャバクラ 〇〇店</div>
-        </div>
-        <div class="girl_profile_item_sp">
-            <img src="{{ asset('img/search4.png') }}" class="girl_list_img" alt="">
-            <div class="girl_list_name_sp">丸々 まる子</div>
-            <div class="girl_list_area_sp">キャバクラ 〇〇店</div>
-        </div>
+        @endforeach     
     </div>
 
 

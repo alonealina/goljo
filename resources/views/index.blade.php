@@ -73,40 +73,40 @@
             <a href="{{ route('girl.show', ['id' => $girl_rank[0]->id ]) }}">
                 <img src="{{ asset('img/girl1.png') }}" class="top_ranking_img" alt="">
                 <img src="{{ asset('img/rank1.png') }}" class="top_rank_mark" alt="">
-                <div class="top_ranking_text"><span class="rank_up_color">↑</span>前回2位</div>
-                <div class="top_ranking_name">{{ $girl_rank[0]->name }}</div>
+                <div class="ranking_list_name">{{ $girl_rank[0]->name }}</div>
+                <div class="ranking_list_area">{{ $girl_rank[0]->kyaba_name }}</div>
             </a>
         </div>
         <div class="top_ranking_content">
             <a href="{{ route('girl.show', ['id' => $girl_rank[1]->id ]) }}">
                 <img src="{{ asset('img/girl2.png') }}" class="top_ranking_img" alt="">
                 <img src="{{ asset('img/rank2.png') }}" class="top_rank_mark" alt="">
-                <div class="top_ranking_text"><span class="rank_up_color">↑</span>前回2位</div>
-                <div class="top_ranking_name">{{ $girl_rank[1]->name }}</div>
+                <div class="ranking_list_name">{{ $girl_rank[1]->name }}</div>
+                <div class="ranking_list_area">{{ $girl_rank[1]->kyaba_name }}</div>
             </a>
         </div>
         <div class="top_ranking_content">
             <a href="{{ route('girl.show', ['id' => $girl_rank[2]->id ]) }}">
                 <img src="{{ asset('img/girl3.png') }}" class="top_ranking_img" alt="">
                 <img src="{{ asset('img/rank3.png') }}" class="top_rank_mark" alt="">
-                <div class="top_ranking_text"><span class="rank_up_color">↑</span>前回2位</div>
-                <div class="top_ranking_name">{{ $girl_rank[2]->name }}</div>
+                <div class="ranking_list_name">{{ $girl_rank[2]->name }}</div>
+                <div class="ranking_list_area">{{ $girl_rank[2]->kyaba_name }}</div>
             </a>
         </div>
         <div class="top_ranking_content">
             <a href="{{ route('girl.show', ['id' => $girl_rank[3]->id ]) }}">
                 <img src="{{ asset('img/girl4.png') }}" class="top_ranking_img" alt="">
                 <img src="{{ asset('img/rank4.png') }}" class="top_rank_mark" alt="">
-                <div class="top_ranking_text"><span class="rank_up_color">↑</span>前回2位</div>
-                <div class="top_ranking_name">{{ $girl_rank[3]->name }}</div>
+                <div class="ranking_list_name">{{ $girl_rank[3]->name }}</div>
+                <div class="ranking_list_area">{{ $girl_rank[3]->kyaba_name }}</div>
             </a>
         </div>
         <div class="top_ranking_content">
             <a href="{{ route('girl.show', ['id' => $girl_rank[4]->id ]) }}">
                 <img src="{{ asset('img/girl1.png') }}" class="top_ranking_img" alt="">
                 <img src="{{ asset('img/rank5.png') }}" class="top_rank_mark" alt="">
-                <div class="top_ranking_text"><span class="rank_up_color">↑</span>前回2位</div>
-                <div class="top_ranking_name">{{ $girl_rank[4]->name }}</div>
+                <div class="ranking_list_name">{{ $girl_rank[4]->name }}</div>
+                <div class="ranking_list_area">{{ $girl_rank[4]->kyaba_name }}</div>
             </a>
         </div>
     </div>

@@ -11,14 +11,6 @@
 <img src="{{ asset('img/event1.png') }}" class="main_img" alt="">
 
 <div class="content_div_bg">
-    <div class="search_form2">
-        <select name="name" class="select_name2">
-            <option value="">名前や詳細条件で検索</option>
-            <option value="B">B型</option>
-            <option value="O">O型</option>
-            <option value="AB">AB型</option>
-        </select>
-    </div>
     <div class="page_div">
         <div class="search_counter">
             イベント検索結果：全 <span class="search_count">{{ $event_list->total() }}</span>
@@ -66,14 +58,6 @@
 <img src="{{ asset('img/event1_sp.png') }}" class="main_img_sp" alt="">
 
 <div class="content_div_bg_sp">
-    <div class="search_form_sp">
-        <select name="name" class="select_sp">
-            <option value="">ハッシュタグで検索</option>
-            <option value="B">B型</option>
-            <option value="O">O型</option>
-            <option value="AB">AB型</option>
-        </select>
-    </div>
     <div class="search_counter_sp">
         イベント検索結果：全 <span class="search_count_sp">{{ $event_list->total() }}</span>
         件中{{ ($event_list->currentPage() -1) * $event_list->perPage() + 1}}～{{ (($event_list->currentPage() -1) * $event_list->perPage() + 1) + (count($event_list) -1) }}件を表示中

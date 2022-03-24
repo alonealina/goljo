@@ -24,8 +24,11 @@
     <div class="recent_div">
         <span class="serif_black">近くの</span><span class="serif_pink">ゴルフ練習場</span><span class="serif_black">情報はこちら</span>
         <div class="recent_list">
+            @if(count($practice_list) == 0)
+            ありません
+            @else
             @foreach ($practice_list as $practice)
-            <a href="{{ route('event.show', ['id' => $practice->id]) }}" class="recent_a">
+            <a href="{{ route('practice.show', ['id' => $practice->id]) }}" class="recent_a">
                 <div class="recent_list_box">
                     <img src="{{ asset('img/course_img.png') }}" class="recent_list_img" alt="">
                     <div class="recent_box_content">
@@ -38,6 +41,7 @@
                 </div>
             </a>
             @endforeach
+            @endif
         </div>
     </div>
 </div>
@@ -71,7 +75,7 @@
         <span class="serif_black_sp">近くの</span><span class="serif_pink_sp">ゴルフ練習場</span><span class="serif_black_sp">の情報はこちら</span>
     </div>
     @foreach ($practice_list as $practice)
-        <a href="{{ route('course.show', ['id' => $practice->id]) }}" class="box_a_sp">
+        <a href="{{ route('practice.show', ['id' => $practice->id]) }}" class="box_a_sp">
             <div class="list_box_sp">
                 <img src="{{ asset('img/course_img.png') }}" class="box_img_sp" alt="">
                 <div class="news_box_content">

@@ -20,10 +20,10 @@ class CourseController extends Controller
     public function show($id)
     {
         $course = Course::find($id);
+        $pref = $course->pref;
 
-
-        $course_list = Course::where('release_flg', 1)->orderBy('name', 'asc')->take(4)->get();
-
+        $course_list = Course::where('pref', $pref)->where('id', '<>', $id)->where('release_flg', 1)->orderBy('name', 'asc')->take(4)->get();
+$l = count($course_list);
 
         return view('course/show', [
             'course' => $course,

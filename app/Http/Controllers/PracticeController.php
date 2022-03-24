@@ -20,9 +20,10 @@ class PracticeController extends Controller
     public function show($id)
     {
         $practice = Practice::find($id);
+        $pref = $practice->pref;
 
 
-        $practice_list = Practice::where('release_flg', 1)->orderBy('name', 'asc')->take(4)->get();
+        $practice_list = Practice::where('pref', $pref)->where('id', '<>', $id)->where('release_flg', 1)->orderBy('name', 'asc')->take(4)->get();
 
 
         return view('practice/show', [
