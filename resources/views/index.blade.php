@@ -15,7 +15,7 @@
         <div class="title_ja">－　ピップアップゴル嬢　－</div>
         <div class="title_text2">
             GOLJOが自信を持ってオススメする全国の美人キャバ嬢達のフォトグラビアコンテンツ！！<br>
-            キャバ嬢グラビアを12件ピックアップして表示しています。
+            キャバ嬢グラビアをピックアップして表示しています。
         </div>
     </div>
     <ul class="slider">
@@ -152,7 +152,7 @@
         <div class="title_text2_sp">
             GOLJOが自信を持ってオススメする<br>
             全国の美人キャバ嬢達のフォトグラビアコンテンツ！！<br><br>
-            キャバ嬢グラビアを12件ピックアップして<br>
+            キャバ嬢グラビアをピックアップして<br>
             表示しています。
         </div>
     </div>
@@ -209,24 +209,32 @@
     </div>
     <div class="top_ranking_list_sp">
         <div class="top_ranking_content_sp">
-            <img src="{{ asset('img/girl1.png') }}" class="top_ranking_img" alt="">
-            <div class="top_ranking_text_sp"><span class="rank_up_color">↑</span>前回2位</div>
-            <div class="top_ranking_name_sp">丸々 まる子</div>
+            <a href="{{ route('girl.show', ['id' => $girl_rank[0]->id ]) }}">
+                <img src="{{ asset('img/girl1.png') }}" class="top_ranking_img" alt="">
+                <div class="top_ranking_name_sp">{{ $girl_rank[0]->name }}</div>
+                <div class="top_ranking_area_sp">{{ $girl_rank[0]->kyaba_name }}</div>
+            </a>    
         </div>
         <div class="top_ranking_content_sp">
-            <img src="{{ asset('img/girl2.png') }}" class="top_ranking_img" alt="">
-            <div class="top_ranking_text_sp"><span class="rank_up_color">↑</span>前回56位</div>
-            <div class="top_ranking_name_sp">丸々 まる子</div>
+            <a href="{{ route('girl.show', ['id' => $girl_rank[1]->id ]) }}">
+                <img src="{{ asset('img/girl2.png') }}" class="top_ranking_img" alt="">
+                <div class="top_ranking_name_sp">{{ $girl_rank[1]->name }}</div>
+                <div class="top_ranking_area_sp">{{ $girl_rank[1]->kyaba_name }}</div>
+            </a>    
         </div>
         <div class="top_ranking_content_sp">
-            <img src="{{ asset('img/girl3.png') }}" class="top_ranking_img" alt="">
-            <div class="top_ranking_text_sp"><span class="rank_down_color">↓</span>前回1位</div>
-            <div class="top_ranking_name_sp">丸々 まる子</div>
+            <a href="{{ route('girl.show', ['id' => $girl_rank[2]->id ]) }}">
+                <img src="{{ asset('img/girl3.png') }}" class="top_ranking_img" alt="">
+                <div class="top_ranking_name_sp">{{ $girl_rank[2]->name }}</div>
+                <div class="top_ranking_area_sp">{{ $girl_rank[2]->kyaba_name }}</div>
+            </a>    
         </div>
         <div class="top_ranking_content_sp">
-            <img src="{{ asset('img/girl4.png') }}" class="top_ranking_img" alt="">
-            <div class="top_ranking_text_sp"><span class="rank_down_color">↓</span>前回2位</div>
-            <div class="top_ranking_name_sp">丸々 まる子</div>
+            <a href="{{ route('girl.show', ['id' => $girl_rank[3]->id ]) }}">
+                <img src="{{ asset('img/girl4.png') }}" class="top_ranking_img" alt="">
+                <div class="top_ranking_name_sp">{{ $girl_rank[3]->name }}</div>
+                <div class="top_ranking_area_sp">{{ $girl_rank[3]->kyaba_name }}</div>
+            </a>    
         </div>
     </div>
     <a href="{{ route('ranking') }}"><img src="{{ asset('img/more_btn_sp.png') }}" class="more_btn_sp" alt=""></a>

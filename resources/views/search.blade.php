@@ -108,5 +108,52 @@
 
 </div>
 
+@endsection
+
+
+
+@section('content_sp')
+<div class="content_div_sp header_margin_sp">
+    <div class="title_text">
+        <span class="title_pink_sp">GOLJO </span><span class="title_black_sp">Search</span>
+        <div class="title_ja_sp">－　ゴル嬢サーチ　－</div>
+        <div class="title_text2_sp">
+            全国のGOLJOの中から好みのキャバ嬢を検索<br>
+            あなたの好みにピッタリのキャバ嬢を今すぐ探し出そう！
+        </div>
+    </div>
+</div>
+<img src="{{ asset('img/ranking1_sp.png') }}" class="main_img_sp" alt="">
+
+<div class="content_div_bg_sp">
+    <div class="search_area_box">
+        対象エリア
+        <select name="name" class="select_area_sp">
+            <option value="">全国</option>
+            <option value="大阪府">大阪</option>
+            <option value="兵庫県">兵庫</option>
+            <option value="奈良県">奈良</option>
+            <option value="京都府">京都</option>
+            <option value="和歌山県">和歌山</option>
+        </select>
+    </div>
+    <div class="search_counter_sp">
+        女の子検索結果：全 <span class="search_count_sp">{{ $girl_list->total() }}</span>
+        件中{{ ($girl_list->currentPage() -1) * $girl_list->perPage() + 1}}～{{ (($girl_list->currentPage() -1) * $girl_list->perPage() + 1) + (count($girl_list) -1) }}件を表示中
+    </div>
+    {{ $girl_list->links('pagination::default_sp') }}
+
+    <div class="girl_list_sp">
+        @foreach ($girl_list as $girl)
+        <div class="girl_profile_item_sp">
+            <a href="{{ route('girl.show', ['id' => $girl->id ]) }}">
+                <img src="{{ asset('img/search1.png') }}" class="girl_list_img" alt="">
+                <div class="girl_list_name_sp">{{ $girl->name }}</div>
+                <div class="girl_list_area_sp">{{ $girl->kyaba_name }}</div>
+            </a>
+        </div>
+        @endforeach
+    </div>
+</div>
 
 @endsection

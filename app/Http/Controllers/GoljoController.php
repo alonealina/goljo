@@ -22,7 +22,11 @@ class GoljoController extends Controller
 
     public function search()
     {
-        return view('search');
+        $girl_list = Girl::paginate(10);
+
+        return view('search', [
+            'girl_list' => $girl_list,
+        ]);
     }
 
     public function event()
