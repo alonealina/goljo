@@ -733,8 +733,12 @@ label {
     margin: 5%;
 }
 
-.select_name2 {
-    width: 100%;
+.select_pref, .select_category {
+    width: 48%;
+}
+
+.select_category {
+    float:right;
 }
 
 .select_sp {

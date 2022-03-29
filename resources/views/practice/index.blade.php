@@ -12,11 +12,17 @@
 
 <div class="content_div_bg">
     <div class="search_form2">
-        <select name="name" class="select_name2">
-            <option value="">名前や詳細条件で検索</option>
-            <option value="B">B型</option>
-            <option value="O">O型</option>
-            <option value="AB">AB型</option>
+        <select name="name" class="select_pref">
+            <option value="">都道府県</option>
+            @foreach (config('const.Prefs') as $name)
+            <option value="{{ $name }}">{{ $name }}</option>
+            @endforeach
+        </select>
+        <select name="name" class="select_category">
+            <option value="">カテゴリー</option>
+            @foreach ($categories as $category)
+            <option value="{{ $category->id }}">{{ $category->name }}</option>
+            @endforeach
         </select>
     </div>
     <div class="page_div">
