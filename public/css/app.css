@@ -140,10 +140,10 @@ select {
         margin: 40px auto 60px auto;
     }
     .header_a {
-        width:140px;
+        width:150px;
         display: inline-block;
         text-align: center;
-        margin: 0 10px;
+        margin: 0 5px;
     }
 }
 
