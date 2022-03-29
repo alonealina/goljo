@@ -118,14 +118,36 @@ select {
     display: block;
 }
 
-.header_menu {
-    margin-top: 50px;
-    width: 1130px;
+@media screen and (min-width: 1230px) {
+    .header_menu {
+        margin-top: 50px;
+        width: 1130px;
+    }
+    .header_menu_n {
+        display:none
+    }
+    .header_a {
+        margin: 22px;
+    }
+}	
+
+@media screen and (max-width: 1229px) {
+    .header_menu {
+        display:none
+    }
+    .header_menu_n {
+        width:700px;
+        margin: 40px auto 60px auto;
+    }
+    .header_a {
+        width:140px;
+        display: inline-block;
+        text-align: center;
+        margin: 0 10px;
+    }
 }
 
-.header_a {
-    margin: 22px;
-}
+
 
 .insta_column {
     width:300%;

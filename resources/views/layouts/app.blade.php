@@ -33,6 +33,16 @@
                     <a href="{{ route('ranking') }}" class="header_a">GOLJO 人気ランキング</a>
                     <a href="{{ route('catalog') }}" class="header_a">Fashionカタログ</a>
                 </div>
+                <div class="header_menu_n">
+                    <a href="{{ route('search') }}" class="header_a">GOLJOサーチ</a>
+                    <a href="/#pickup" class="header_a">Pickup GOLJO</a>
+                    <a href="{{ route('event') }}" class="header_a">イベント</a>
+                    <a href="{{ route('course') }}" class="header_a">オススメGOLF場</a><br>
+                    <a href="{{ route('practice') }}" class="header_a">練習場</a>
+                    <a href="{{ route('news') }}" class="header_a">ニュース</a>
+                    <a href="{{ route('ranking') }}" class="header_a">GOLJO 人気ランキング</a>
+                    <a href="{{ route('catalog') }}" class="header_a">Fashionカタログ</a>
+                </div>
             </header>
             <div class="insta_column">
                 <p class="insta_scroll">
