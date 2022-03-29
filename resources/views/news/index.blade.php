@@ -20,6 +20,7 @@
                     @elseif($news->genre == 3)
                     <div class="lady_mark">LADY</div>
                     @endif
+                    <div class="top_news_date">{{ $news->notice_date }}</div>
                     <div class="top_news_title">{{ $news->title }}</div>
                     <div class="top_news_text">
                     {!! nl2br(e($news->content)) !!}
@@ -63,6 +64,7 @@
                     @elseif($news->genre == 3)
                     <div class="lady_mark_sp">LADY</div>
                     @endif
+                    <div class="box_date_sp">{{ $news->notice_date }}</div>
                     <div class="box_title_sp">{{ $news->title }}</div>
                     <div class="box_text_sp">
                     {!! nl2br(e($news->content)) !!}

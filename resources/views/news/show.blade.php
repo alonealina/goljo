@@ -51,6 +51,7 @@
         @elseif($news->genre == 3)
         <div class="lady_mark_sp" style="margin-top:30px;">LADY</div>
         @endif
+        <div class="detail_date_sp">{{ $news->notice_date }}</div>
         <div class="detail_title_sp">{{ $news->title }}</div>
         <div class="detail_content_sp">{!! nl2br(e($news->content)) !!}</div>
         <div class="news_btn_list_sp">
