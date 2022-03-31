@@ -10,13 +10,37 @@ use DB;
 
 class CourseController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $course_list = Course::where('release_flg', 1)->paginate(5);
         $categories = CourseCategory::orderBy('id', 'asc')->get();
+        $filter_array = $request->all();
+        $pref = null;
+        $category = null;
+
+        if (isset($filter_array['pref'])) {
+            $pref = $filter_array['pref'];
+        }
+        if (isset($filter_array['category'])) {
+            $category = $filter_array['category'];
+        }
+
+        $query = Course::where('release_flg', 1);
+
+        if (isset($pref)) {
+            $query->where('pref', $pref);
+        }
+
+        if (isset($category)) {
+            $query->where('category_id', $category);
+        }
+
+        $course_list = $query->paginate(5);
+
         return view('course/index', [
             'course_list' => $course_list,
             'categories' => $categories,
+            'filter_pref' => $pref,
+            'filter_category' => $category,
         ]);
     }
 

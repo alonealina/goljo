@@ -12,18 +12,23 @@
 
 <div class="content_div_bg">
     <div class="search_form2">
-        <select name="name" class="select_pref">
-            <option value="">都道府県</option>
-            @foreach (config('const.Prefs') as $name)
-            <option value="{{ $name }}">{{ $name }}</option>
-            @endforeach
-        </select>
-        <select name="name" class="select_category">
-            <option value="">カテゴリー</option>
-            @foreach ($categories as $category)
-            <option value="{{ $category->id }}">{{ $category->name }}</option>
-            @endforeach
-        </select>
+        <form id="form" name="course_form" action="{{ route('course') }}" method="get">
+            <select name="pref" class="select_pref">
+                <option value="">都道府県</option>
+                @foreach (config('const.Prefs') as $name)
+                <option value="{{ $name }}" @if(isset($filter_pref) && $filter_pref == $name) selected @endif >{{ $name }}</option>
+                @endforeach
+            </select>
+            <select name="category" class="select_category">
+                <option value="">カテゴリー</option>
+                @foreach ($categories as $category)
+                <option value="{{ $category->id }}" @if(isset($filter_category) && $filter_category == $category->id) selected @endif >{{ $category->name }}</option>
+                @endforeach
+            </select>
+        </form>
+        <div class="search_button">
+        <a href="#" onclick="clickCourseButton()">検索する</a>
+        </div>
     </div>
     <div class="page_div">
         <div class="search_counter">
@@ -74,12 +79,23 @@
 
 <div class="content_div_bg_sp">
     <div class="search_form_sp">
-        <select name="name" class="select_sp">
-            <option value="">ハッシュタグで検索</option>
-            <option value="B">B型</option>
-            <option value="O">O型</option>
-            <option value="AB">AB型</option>
-        </select>
+        <form id="form" name="course_form_sp" action="{{ route('course') }}" method="get">
+            <select name="pref" class="select_pref_sp">
+                <option value="">都道府県</option>
+                @foreach (config('const.Prefs') as $name)
+                <option value="{{ $name }}" @if(isset($filter_pref) && $filter_pref == $name) selected @endif >{{ $name }}</option>
+                @endforeach
+            </select>
+            <select name="category" class="select_category_sp">
+                <option value="">カテゴリー</option>
+                @foreach ($categories as $category)
+                <option value="{{ $category->id }}" @if(isset($filter_category) && $filter_category == $category->id) selected @endif >{{ $category->name }}</option>
+                @endforeach
+            </select>
+        </form>
+        <div class="search_button_sp">
+        <a href="#" onclick="clickCourseButtonSp()">検索する</a>
+        </div>
     </div>
     <div class="search_counter_sp">
         ゴルフ場検索結果：全 <span class="search_count_sp">{{ $course_list->total() }}</span>
@@ -100,11 +116,13 @@
             </div>
         </a>
     @endforeach
+    @if($course_list->total() > 0)
     <div class="search_counter_sp">
         ゴルフ場検索結果：全 <span class="search_count_sp">{{ $course_list->total() }}</span>
         件中{{ ($course_list->currentPage() -1) * $course_list->perPage() + 1}}～{{ (($course_list->currentPage() -1) * $course_list->perPage() + 1) + (count($course_list) -1) }}件を表示中
     </div>
     {{ $course_list->links('pagination::default_sp') }}
+    @endif
 </div>
 
 

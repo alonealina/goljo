@@ -10,14 +10,37 @@ use DB;
 
 class PracticeController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $practice_list = Practice::where('release_flg', 1)->paginate(5);
         $categories = PracticeCategory::orderBy('id', 'asc')->get();
+        $filter_array = $request->all();
+        $pref = null;
+        $category = null;
+
+        if (isset($filter_array['pref'])) {
+            $pref = $filter_array['pref'];
+        }
+        if (isset($filter_array['category'])) {
+            $category = $filter_array['category'];
+        }
+
+        $query = Practice::where('release_flg', 1);
+
+        if (isset($pref)) {
+            $query->where('pref', $pref);
+        }
+
+        if (isset($category)) {
+            $query->where('category_id', $category);
+        }
+
+        $practice_list = $query->paginate(5);
 
         return view('practice/index', [
             'practice_list' => $practice_list,
             'categories' => $categories,
+            'filter_pref' => $pref,
+            'filter_category' => $category,
         ]);
     }
 
