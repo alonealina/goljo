@@ -615,7 +615,6 @@ select {
 
 .search_text {
     width:100%;
-    margin-top:50px;
     margin-bottom: 20px;
 }
 
@@ -680,6 +679,7 @@ select {
 
 .search_radio_list {
     width:100%;
+    margin-bottom: 20px;
     display: -webkit-flex; /* Safari */
     display: flex;
     -webkit-justify-content: space-between; /* Safari */

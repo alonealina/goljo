@@ -14,3 +14,11 @@ function clickPracticeButtonSp() {
     document.forms.practice_form_sp.submit();
 }
 
+function clickSearchButton() {
+    document.forms.search_form.submit();
+}
+
+function clickSearchButtonSp() {
+    document.forms.search_form_sp.submit();
+}
+

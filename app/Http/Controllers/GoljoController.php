@@ -20,9 +20,22 @@ class GoljoController extends Controller
         ]);
     }
 
-    public function search()
+    public function search(Request $request)
     {
-        $girl_list = Girl::paginate(10);
+        $filter_array = $request->all();
+        $pref = null;
+
+        if (isset($filter_array['pref'])) {
+            $pref = $filter_array['pref'];
+        }
+
+        $query = Girl::select('*');
+
+        if (isset($pref)) {
+            $query->where('pref', $pref);
+        }
+
+        $girl_list = $query->paginate(10);
 
         return view('search', [
             'girl_list' => $girl_list,

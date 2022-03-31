@@ -15,95 +15,63 @@
 
 <div class="content_div_bg">
     <div class="search_form">
-        <div class="search_radio_list">
-            <input id="area_1" class="search_radio" type="radio" name="area" value="all" checked="checked"/>
-            <label class="label" for="area_1">全国</label>
-            <input id="area_2" class="search_radio" type="radio" name="area" value="osaka"/>
-            <label class="label" for="area_2">大阪</label>
-            <input id="area_3" class="search_radio" type="radio" name="area" value="hyogo"/>
-            <label class="label" for="area_3">兵庫</label>
-            <input id="area_4" class="search_radio" type="radio" name="area" value="nara"/>
-            <label class="label" for="area_4">奈良</label>
-            <input id="area_5" class="search_radio" type="radio" name="area" value="kyoto"/>
-            <label class="label" for="area_5">京都</label>
-            <input id="area_6" class="search_radio" type="radio" name="area" value="wakayama"/>
-            <label class="label" for="area_6">和歌山</label>
+        <form id="form" name="search_form" action="{{ route('search') }}" method="get">
+            <div class="search_text">詳細条件を設定しキャバ嬢を検索する場合は、下記をご利用ください。</div>
+            <div class="search_radio_list">
+                <input id="area_1" class="search_radio" type="radio" name="pref" value="" checked="checked"/>
+                <label class="label" for="area_1">全国</label>
+                <input id="area_2" class="search_radio" type="radio" name="pref" value="大阪府"/>
+                <label class="label" for="area_2">大阪</label>
+                <input id="area_3" class="search_radio" type="radio" name="pref" value="兵庫県"/>
+                <label class="label" for="area_3">兵庫</label>
+                <input id="area_4" class="search_radio" type="radio" name="pref" value="奈良県"/>
+                <label class="label" for="area_4">奈良</label>
+                <input id="area_5" class="search_radio" type="radio" name="pref" value="京都府"/>
+                <label class="label" for="area_5">京都</label>
+                <input id="area_6" class="search_radio" type="radio" name="pref" value="和歌山県"/>
+                <label class="label" for="area_6">和歌山</label>
+            </div>
+            <select name="tag" class="select_tag">
+                <option value="">ハッシュタグで検索</option>
+                <option value="B">B型</option>
+                <option value="O">O型</option>
+                <option value="AB">AB型</option>
+            </select>
+            <select name="name" class="select_name">
+                <option value="">名前や詳細条件で検索</option>
+                <option value="B">B型</option>
+                <option value="O">O型</option>
+                <option value="AB">AB型</option>
+            </select>
+        </form>
+        <div class="search_button" style="margin-top:90px;">
+            <a href="#" onclick="clickSearchButton()">検索する</a>
         </div>
-        <div class="search_text">詳細条件を設定しキャバ嬢を検索する場合は、下記をご利用ください。</div>
-        <select name="tag" class="select_tag">
-            <option value="">ハッシュタグで検索</option>
-            <option value="B">B型</option>
-            <option value="O">O型</option>
-            <option value="AB">AB型</option>
-        </select>
-        <select name="name" class="select_name">
-            <option value="">名前や詳細条件で検索</option>
-            <option value="B">B型</option>
-            <option value="O">O型</option>
-            <option value="AB">AB型</option>
-        </select>
     </div>
+
     <div class="search_page_before">
         <div class="search_counter">
-            女の子検索結果：全 <span class="search_count">303</span> 件中1～25名を表示中
+            女の子検索結果：全 <span class="search_count">{{ $girl_list->total() }}</span>
+            件中{{ ($girl_list->currentPage() -1) * $girl_list->perPage() + 1}}～{{ (($girl_list->currentPage() -1) * $girl_list->perPage() + 1) + (count($girl_list) -1) }}件を表示中
         </div>
     </div>
     <div class="search_list">
+        @foreach ($girl_list as $girl)
         <div class="search_list_item">
-            <img src="{{ asset('img/search1.png') }}" class="search_list_img" alt="">
-            <div class="search_list_name">丸々 まる子</div>
-            <div class="search_list_area">キャバクラ 〇〇店</div>
+            <a href="{{ route('girl.show', ['id' => $girl->id ]) }}">
+                <img src="{{ asset('img/search1.png') }}" class="search_list_img" alt="">
+                <div class="search_list_name">{{ $girl->name }}</div>
+                <div class="search_list_area">{{ $girl->kyaba_name }}</div>
+            </a>
         </div>
-        <div class="search_list_item">
-            <img src="{{ asset('img/search2.png') }}" class="search_list_img" alt="">
-            <div class="search_list_name">丸々 まる子</div>
-            <div class="search_list_area">キャバクラ 〇〇店</div>
-        </div>
-        <div class="search_list_item">
-            <img src="{{ asset('img/search3.png') }}" class="search_list_img" alt="">
-            <div class="search_list_name">丸々 まる子</div>
-            <div class="search_list_area">キャバクラ 〇〇店</div>
-        </div>
-        <div class="search_list_item">
-            <img src="{{ asset('img/search4.png') }}" class="search_list_img" alt="">
-            <div class="search_list_name">丸々 まる子</div>
-            <div class="search_list_area">キャバクラ 〇〇店</div>
-        </div>
-        <div class="search_list_item">
-            <img src="{{ asset('img/search5.png') }}" class="search_list_img" alt="">
-            <div class="search_list_name">丸々 まる子</div>
-            <div class="search_list_area">キャバクラ 〇〇店</div>
-        </div>
-        <div class="search_list_item">
-            <img src="{{ asset('img/search1.png') }}" class="search_list_img" alt="">
-            <div class="search_list_name">丸々 まる子</div>
-            <div class="search_list_area">キャバクラ 〇〇店</div>
-        </div>
-        <div class="search_list_item">
-            <img src="{{ asset('img/search2.png') }}" class="search_list_img" alt="">
-            <div class="search_list_name">丸々 まる子</div>
-            <div class="search_list_area">キャバクラ 〇〇店</div>
-        </div>
-        <div class="search_list_item">
-            <img src="{{ asset('img/search3.png') }}" class="search_list_img" alt="">
-            <div class="search_list_name">丸々 まる子</div>
-            <div class="search_list_area">キャバクラ 〇〇店</div>
-        </div>
-        <div class="search_list_item">
-            <img src="{{ asset('img/search4.png') }}" class="search_list_img" alt="">
-            <div class="search_list_name">丸々 まる子</div>
-            <div class="search_list_area">キャバクラ 〇〇店</div>
-        </div>
-        <div class="search_list_item">
-            <img src="{{ asset('img/search5.png') }}" class="search_list_img" alt="">
-            <div class="search_list_name">丸々 まる子</div>
-            <div class="search_list_area">キャバクラ 〇〇店</div>
-        </div>
+        @endforeach
     </div>
     <div class="search_page_after">
         <div class="search_counter">
-            女の子検索結果：全 <span class="search_count">303</span> 件中1～25名を表示中
+            女の子検索結果：全 <span class="search_count">{{ $girl_list->total() }}</span>
+            件中{{ ($girl_list->currentPage() -1) * $girl_list->perPage() + 1}}～{{ (($girl_list->currentPage() -1) * $girl_list->perPage() + 1) + (count($girl_list) -1) }}件を表示中
         </div>
+        {{ $girl_list->links('pagination::default') }}
     </div>
 
 </div>
@@ -126,17 +94,24 @@
 <img src="{{ asset('img/ranking1_sp.png') }}" class="main_img_sp" alt="">
 
 <div class="content_div_bg_sp">
-    <div class="search_area_box">
-        対象エリア
-        <select name="name" class="select_area_sp">
-            <option value="">全国</option>
-            <option value="大阪府">大阪</option>
-            <option value="兵庫県">兵庫</option>
-            <option value="奈良県">奈良</option>
-            <option value="京都府">京都</option>
-            <option value="和歌山県">和歌山</option>
-        </select>
-    </div>
+    <form id="form" name="search_form" action="{{ route('search') }}" method="get">
+        <div class="search_area_box">
+            対象エリア
+            <select name="name" class="select_area_sp">
+                <option value="">全国</option>
+                <option value="大阪府">大阪</option>
+                <option value="兵庫県">兵庫</option>
+                <option value="奈良県">奈良</option>
+                <option value="京都府">京都</option>
+                <option value="和歌山県">和歌山</option>
+            </select>
+            <div class="search_button_sp">
+                <a href="#" onclick="clickSearchButtonSp()" style="margin: 0 10px 10px auto;">検索する</a>
+            </div>
+        </div>
+
+    </form>
+
     <div class="search_counter_sp">
         女の子検索結果：全 <span class="search_count_sp">{{ $girl_list->total() }}</span>
         件中{{ ($girl_list->currentPage() -1) * $girl_list->perPage() + 1}}～{{ (($girl_list->currentPage() -1) * $girl_list->perPage() + 1) + (count($girl_list) -1) }}件を表示中
