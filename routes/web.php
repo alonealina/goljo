@@ -28,7 +28,9 @@ Route::POST('/user_login', 'App\Http\Controllers\GoljoController@login_user')->n
 Route::get('/user_logout', 'App\Http\Controllers\GoljoController@logout_user')->name('logout')->middleware('login_user');
 
 // 管理側ログイン
-Route::get('admin/login', function () { return view('login_admin'); });
+Route::get('admin/', 'App\Http\Controllers\AdminController@index')->name('admin.index');
+Route::get('admin/girl_list', 'App\Http\Controllers\GirlController@girl_list')->name('admin.girl_list');
+
 
 Route::POST('/admin_login', 'App\Http\Controllers\GoljoController@login_admin')->name('admin.login');
-Route::get('/admin_logout', 'App\Http\Controllers\GoljoController@logout_admin')->name('admin.logout')->middleware('login_admin');
+Route::get('/admin_logout', 'App\Http\Controllers\GoljoController@logout_admin')->name('admin.logout');

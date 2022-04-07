@@ -3,6 +3,54 @@ html {
     background: #F7F7F7 0% 0% no-repeat padding-box;
 }
 
+.navbar-brand {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    width:170px;
+    margin-right: 0;
+}
+
+.navbar {
+    background: transparent linear-gradient(180deg, #262626 0%, #414141 100%) 0% 0% no-repeat padding-box;
+    padding:0;
+    height: 124px;
+    justify-content:unset;
+}
+
+.admin_logo {
+    width: 160px;
+    height: 114px;
+    margin: auto;
+    display: block;
+}
+
+.admin_menu {
+    padding:50px 15px;
+    font: normal normal 600 14px/20px Open Sans;
+}
+
+.admin_side_menu {
+    padding:20px;
+    font: normal normal 600 14px/20px Open Sans;
+    text-align: center;
+}
+
+.admin_menu a, .admin_side_menu a {
+    color: #FFFFFF;
+}
+
+.content_div {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #454545;
+    border-radius: 4px;
+    margin: 20px;
+    padding:20px;
+}
+
+.content_title {
+    font: normal normal 600 14px/20px Open Sans;
+    color: #262626;
+}
+
 .header_content {
     width:100%;
     text-align:center;
@@ -17,6 +65,130 @@ html {
     display: flex;
 }
 
+.header_user {
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.flexible-list {
+    min-height: 800px;
+    display: flex;
+    margin: 0 auto;
+    padding: 0 0px;
+    width: 100%;
+}
+
+.flexible-list-side {
+    min-width: 170px;
+    padding-top: 30px;
+    background: #2F2F2F 0% 0% no-repeat padding-box;
+}
+
+.flexible-list-main {
+    background: #F2F2F2;
+    width: 100%;
+}
+
+.girl_item_name, .girl_list_checkbox {
+    margin:10px 5px;
+    text-align: center;
+}
+
+.girl_list_checkbox {
+    width:3%;
+}
+
+.girl_list_id {
+    width:7%;
+}
+
+.girl_list_name {
+    width:8%;
+}
+
+.girl_list_address {
+    width:11%;
+}
+
+.girl_list_tel {
+    width:10%;
+}
+
+.girl_list_time {
+    width:9%;
+}
+
+.girl_list_fivestar {
+    width:4%;
+}
+
+.girl_list_status {
+    width:7%;
+}
+
+.girl_list_recommend {
+    width:6%;
+}
+
+.girl_list_created, .girl_list_updated {
+    width:8%;
+}
+
+.girl_list_button_blue a,
+.menu_list_button_blue a {
+    font-size: 10px;
+    font-weight: bold;
+    display:block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background:#437EC4;
+    color:#fff;
+    margin:5px;
+    border-radius:8px;
+    text-decoration:none;
+    text-align:center;
+}
+
+.girl_list_detail_button_blue a {
+    font-size: 10px;
+    font-weight: bold;
+    display:block;
+    width: 50px;
+    height: 50px;
+    padding-top:12px;
+    background:#437EC4;
+    color:#fff;
+    margin:5px;
+    border-radius:8px;
+    text-decoration:none;
+    text-align:center;
+}
+
+.girl_list_button_red a,
+.menu_list_button_red a {
+    font-size: 10px;
+    font-weight: bold;
+    display:block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background:#CB0C0C;
+    color:#fff;
+    margin:5px;
+    border-radius:8px;
+    text-decoration:none;
+    text-align:center;
+}
+
+.filter_flex, .girl_list_column, .setting_list_column {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.girl_list_column, .setting_list_column {
+    border:solid 1px #f3f3f3;
+}
 
 .logo_header {
     margin-top: 15px;
@@ -247,12 +419,12 @@ select {
 }
 
 .logout_button a {
-    font: normal normal normal 15px/26px Hiragino Sans;
+    font: normal normal normal 14px/22px Hiragino Sans;
     letter-spacing: 1.05px;
     display: block;
-    width: 154px;
-    height: 40px;
-    line-height: 42px;
+    width: 120px;
+    height: 30px;
+    line-height: 33px;
     background: #20A1B6 0% 0% no-repeat padding-box;
     color: #fff;
     border-radius: 50px;

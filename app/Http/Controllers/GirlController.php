@@ -23,5 +23,13 @@ class GirlController extends Controller
         ]);
     }
 
+    public function girl_list()
+    {
+        $girls = Girl::paginate(10);
+
+        return view('admin/girl_list', [
+            'girls' => $girls ]);
+    }
+
 
 }
