@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\News;
 use App\Models\Girl;
+use App\Models\AdminUser;
 
 class GoljoController extends Controller
 {
@@ -71,5 +72,23 @@ class GoljoController extends Controller
         return view('catalog');
     }
 
+    public function login(Request $request)
+    {
+        $admin_user = AdminUser::where('login_id', $request->login_id)->first();
+        if (isset($admin_user)) {
+            if ($request->password == $admin_user->password) {
+                // セッション
+                session(['login_id' => $admin_user->login_id]);
+                return redirect('admin/girl_list'); 
+            }
+        }
 
+        return view('admin/login', ['login_error' => '1']);
+    }
+    
+    public function logout(Request $request)
+    {
+        session()->forget('login_id');
+        return redirect('admin/login');
+    }
 }

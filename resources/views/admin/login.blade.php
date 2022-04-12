@@ -12,45 +12,36 @@
     </head>
 
     <body>
-
         <header>
             <nav class="navbar">
-                <a class="navbar-brand" href="{{ route('admin.index') }}">
+                <a class="navbar-brand" href="">
                     <img src="{{ asset('img/logo.png') }}" class="admin_logo" alt="">
                 </a>
-                <div class="admin_menu">
-                    <a href="{{ route('admin.girl_list') }}">女の子管理</a>
-                </div>
-                <div class="admin_menu">
-                    <a href="{{ route('admin.event_list') }}">イベント管理</a>
-                </div>
-                <div class="admin_menu">
-                    <a href="{{ route('admin.course_list') }}">ゴルフ場管理</a>
-                </div>
-                <div class="admin_menu">
-                    <a href="{{ route('admin.practice_list') }}">練習場管理</a>
-                </div>
-                <div class="admin_menu">
-                    <a href="{{ route('admin.news_list') }}">ニュース管理</a>
-                </div>
-                <div class="admin_menu">
-                    <a href="">カタログ管理</a>
-                </div>
-                <div class="header_user">
-                    <div class="logout_button">
-                        <a href="{{ route('admin.logout') }}">ログアウト</a>
-                    </div>
-                </div>
             </nav>
         </header>
 
-        <div class="flexible-list">
-            <aside id="column-side" class="flexible-list-side">
-                @yield('side_menu')
-            </aside>
-            <div class="flexible-list-main" id="flexible-list-main">
-                @yield('content')
-            </div>
+        <div class="login_div">
+            {{-- エラーメッセージ --}}
+            @if (isset($login_error))
+                <div id="error_explanation" class="text-danger">
+                メールアドレスまたはパスワードが一致しません。
+                </div>
+            @endif
+            
+            {{-- フォーム --}}
+            <form action="{{ url('admin_login') }}" method="post">
+                @csrf  
+                <div class="form-group">
+                <div class="login_form_name">ログインID</div>
+                <input type="text" class="form-control" id="user_email" name="login_id">
+                </div>     
+                <div class="form-group">
+                <div class="login_form_name">パスワード</div>
+                <input type="password" class="form-control" id="user_password" name="password">
+                </div>     
+                <input type="submit" value="ログイン" class="btn login_button">  
+            </form>
+
         </div>
 
     </body>

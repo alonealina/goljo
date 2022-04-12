@@ -31,5 +31,13 @@ class EventController extends Controller
         ]);
     }
 
+    public function event_list()
+    {
+        $events = Event::paginate(10);
+
+        return view('admin/event_list', [
+            'events' => $events ]);
+    }
+
 
 }

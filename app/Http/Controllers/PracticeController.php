@@ -57,5 +57,12 @@ class PracticeController extends Controller
         ]);
     }
 
+    public function practice_list()
+    {
+        $practices = Practice::paginate(10);
+
+        return view('admin/practice_list', [
+            'practices' => $practices ]);
+    }
 
 }

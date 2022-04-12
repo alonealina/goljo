@@ -52,5 +52,13 @@ class NewsController extends Controller
         ]);
     }
 
+    public function news_list()
+    {
+        $news_list = News::paginate(10);
+
+        return view('admin/news_list', [
+            'news_list' => $news_list ]);
+    }
+
 
 }

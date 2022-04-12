@@ -56,5 +56,12 @@ class CourseController extends Controller
         ]);
     }
 
+    public function course_list()
+    {
+        $courses = Course::paginate(10);
+
+        return view('admin/course_list', [
+            'courses' => $courses ]);
+    }
 
 }
