@@ -3,10 +3,10 @@
 @section('side_menu')
 
 <div class="admin_side_menu">
-    <a href="">ゴルフ場登録</a>
+    <a href="{{ route('admin.course_regist') }}">ゴルフ場登録</a>
 </div>
-<div class="admin_side_menu">
-    <a href="">ゴルフ場管理</a>
+<div class="admin_current_menu">
+    <a href="{{ route('admin.course_list') }}">ゴルフ場管理</a>
 </div>
 
 @endsection
@@ -62,7 +62,7 @@
                     <a href="course_edit/{{ $course->id }}">編集</a>
                 </div>
                 <div class="list_button_red">
-                    <a href="" onclick="return confirm('本当に削除しますか？')">削除</a>
+                    <a href="course_delete/{{ $course->id }}" onclick="return confirm('本当に削除しますか？')">削除</a>
                 </div>
             </div>
             @endforeach

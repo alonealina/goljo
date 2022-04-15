@@ -3,10 +3,10 @@
 @section('side_menu')
 
 <div class="admin_side_menu">
-    <a href="">練習場登録</a>
+    <a href="{{ route('admin.practice_regist') }}">練習場登録</a>
 </div>
-<div class="admin_side_menu">
-    <a href="">練習場管理</a>
+<div class="admin_current_menu">
+    <a href="{{ route('admin.practice_list') }}">練習場管理</a>
 </div>
 
 @endsection
@@ -59,10 +59,10 @@
                     <div class="admin_item_name">{{ $practice->content2 }}</div>
                 </div>
                 <div class="list_button_blue">
-                    <a href="course_edit/{{ $practice->id }}">編集</a>
+                    <a href="practice_edit/{{ $practice->id }}">編集</a>
                 </div>
                 <div class="list_button_red">
-                    <a href="" onclick="return confirm('本当に削除しますか？')">削除</a>
+                    <a href="practice_delete/{{ $practice->id }}" onclick="return confirm('本当に削除しますか？')">削除</a>
                 </div>
             </div>
             @endforeach

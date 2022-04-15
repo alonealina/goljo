@@ -22,3 +22,6 @@ function clickSearchButtonSp() {
     document.forms.search_form_sp.submit();
 }
 
+function clickRegistButton() {
+    document.forms.regist_form.submit();
+}

@@ -26,8 +26,18 @@ Route::get('admin/girl_list', 'App\Http\Controllers\GirlController@girl_list')->
 Route::get('admin/event_list', 'App\Http\Controllers\EventController@event_list')->name('admin.event_list')->middleware('login');
 
 Route::get('admin/course_list', 'App\Http\Controllers\CourseController@course_list')->name('admin.course_list')->middleware('login');
+Route::get('admin/course_regist', 'App\Http\Controllers\CourseController@course_regist')->name('admin.course_regist')->middleware('login');
+Route::post('admin/course_store', 'App\Http\Controllers\CourseController@course_store')->name('admin.course_store')->middleware('login');
+Route::get('admin/course_edit/{id}/', 'App\Http\Controllers\CourseController@course_edit')->name('admin.course_edit')->middleware('login');
+Route::post('admin/course_update', 'App\Http\Controllers\CourseController@course_update')->name('admin.course_update')->middleware('login');
+Route::get('admin/course_delete/{id}/', 'App\Http\Controllers\CourseController@course_delete')->name('admin.course_delete')->middleware('login');
 
 Route::get('admin/practice_list', 'App\Http\Controllers\PracticeController@practice_list')->name('admin.practice_list')->middleware('login');
+Route::get('admin/practice_regist', 'App\Http\Controllers\PracticeController@practice_regist')->name('admin.practice_regist')->middleware('login');
+Route::post('admin/practice_store', 'App\Http\Controllers\PracticeController@practice_store')->name('admin.practice_store')->middleware('login');
+Route::get('admin/practice_edit/{id}/', 'App\Http\Controllers\PracticeController@practice_edit')->name('admin.practice_edit')->middleware('login');
+Route::post('admin/practice_update', 'App\Http\Controllers\PracticeController@practice_update')->name('admin.practice_update')->middleware('login');
+Route::get('admin/practice_delete/{id}/', 'App\Http\Controllers\PracticeController@practice_delete')->name('admin.practice_delete')->middleware('login');
 
 Route::get('admin/news_list', 'App\Http\Controllers\NewsController@news_list')->name('admin.news_list')->middleware('login');
 Route::get('admin/news_regist', 'App\Http\Controllers\NewsController@news_regist')->name('admin.news_regist')->middleware('login');

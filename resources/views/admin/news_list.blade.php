@@ -3,10 +3,10 @@
 @section('side_menu')
 
 <div class="admin_side_menu">
-    <a href="">ニュース登録</a>
+    <a href="{{ route('admin.news_regist') }}">ニュース登録</a>
 </div>
-<div class="admin_side_menu">
-    <a href="">ニュース管理</a>
+<div class="admin_side_menu admin_current_menu">
+    <a href="{{ route('admin.news_list') }}">ニュース管理</a>
 </div>
 
 @endsection
@@ -64,7 +64,7 @@
                     <a href="news_edit/{{ $news->id }}">編集</a>
                 </div>
                 <div class="list_button_red">
-                    <a href="" onclick="return confirm('本当に削除しますか？')">削除</a>
+                    <a href="news_delete/{{ $news->id }}" onclick="return confirm('本当に削除しますか？')">削除</a>
                 </div>
             </div>
             @endforeach
