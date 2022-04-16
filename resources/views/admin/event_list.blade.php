@@ -3,10 +3,10 @@
 @section('side_menu')
 
 <div class="admin_side_menu">
-    <a href="">イベント登録</a>
+    <a href="{{ route('admin.event_regist') }}">イベント登録</a>
 </div>
-<div class="admin_side_menu">
-    <a href="">イベント管理</a>
+<div class="admin_current_menu">
+    <a href="{{ route('admin.event_list') }}">イベント管理</a>
 </div>
 
 @endsection
@@ -56,7 +56,7 @@
                     <a href="event_edit/{{ $event->id }}">編集</a>
                 </div>
                 <div class="list_button_red">
-                    <a href="" onclick="return confirm('本当に削除しますか？')">削除</a>
+                    <a href="event_delete/{{ $event->id }}" onclick="return confirm('本当に削除しますか？')">削除</a>
                 </div>
             </div>
             @endforeach

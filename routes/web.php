@@ -24,6 +24,11 @@ Route::get('admin/', 'App\Http\Controllers\AdminController@index')->name('admin.
 Route::get('admin/girl_list', 'App\Http\Controllers\GirlController@girl_list')->name('admin.girl_list')->middleware('login');
 
 Route::get('admin/event_list', 'App\Http\Controllers\EventController@event_list')->name('admin.event_list')->middleware('login');
+Route::get('admin/event_regist', 'App\Http\Controllers\EventController@event_regist')->name('admin.event_regist')->middleware('login');
+Route::post('admin/event_store', 'App\Http\Controllers\EventController@event_store')->name('admin.event_store')->middleware('login');
+Route::get('admin/event_edit/{id}/', 'App\Http\Controllers\EventController@event_edit')->name('admin.event_edit')->middleware('login');
+Route::post('admin/event_update', 'App\Http\Controllers\EventController@event_update')->name('admin.event_update')->middleware('login');
+Route::get('admin/event_delete/{id}/', 'App\Http\Controllers\EventController@event_delete')->name('admin.event_delete')->middleware('login');
 
 Route::get('admin/course_list', 'App\Http\Controllers\CourseController@course_list')->name('admin.course_list')->middleware('login');
 Route::get('admin/course_regist', 'App\Http\Controllers\CourseController@course_regist')->name('admin.course_regist')->middleware('login');
