@@ -25,14 +25,14 @@
         @endif
 
         @csrf
-        <div class="flex_form_item flex_notice_title">
+        <div class="flex_form_item">
             <div class="flex_form_title">練習場名</div>
             <div class="flex_form_content">
                 {{ Form::text('name', old('name', $practice->name), ['class' => '', 'maxlength' => 20]) }}
             </div>
         </div>
 
-        <div class="flex_form_item flex_notice_title">
+        <div class="flex_form_item">
             <div class="flex_form_title">都道府県</div>
             <div class="flex_form_content">
                 <select name="pref">
@@ -45,7 +45,7 @@
             </div>
         </div>
 
-        <div class="flex_form_item flex_notice_title">
+        <div class="flex_form_item">
             <div class="flex_form_title">住所</div>
             <div class="flex_form_content">
                 {{ Form::text('address', old('address', $practice->address), ['class' => 'form_address', 'maxlength' => 50]) }}
@@ -53,7 +53,7 @@
         </div>
 
 
-        <div class="flex_form_item flex_notice_title">
+        <div class="flex_form_item">
             <div class="flex_form_title">カテゴリ</div>
             <div class="flex_form_content">
                 <select name="category_id">

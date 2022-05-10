@@ -3,10 +3,10 @@
 @section('side_menu')
 
 <div class="admin_side_menu">
-    <a href="">女の子新規登録</a>
+    <a href="{{ route('admin.girl_regist') }}">女の子登録</a>
 </div>
-<div class="admin_side_menu">
-    <a href="">女の子管理</a>
+<div class="admin_current_menu">
+    <a href="{{ route('admin.girl_list') }}">女の子管理</a>
 </div>
 
 @endsection
@@ -80,7 +80,7 @@
                     <a href="girl_edit/{{ $girl->id }}">編集</a>
                 </div>
                 <div class="list_button_red">
-                    <a href="" onclick="return confirm('本当に削除しますか？')">削除</a>
+                    <a href="girl_delete/{{ $girl->id }}" onclick="return confirm('本当に削除しますか？')">削除</a>
                 </div>
             </div>
             @endforeach

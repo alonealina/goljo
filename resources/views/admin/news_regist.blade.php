@@ -24,14 +24,14 @@
         @endif
 
         @csrf
-        <div class="flex_form_item flex_notice_title">
+        <div class="flex_form_item">
             <div class="flex_form_title">タイトル</div>
             <div class="flex_form_content">
                 {{ Form::text('title', old('title'), ['class' => '', 'maxlength' => 20]) }}
             </div>
         </div>
 
-        <div class="flex_form_item flex_notice_title">
+        <div class="flex_form_item">
             <div class="flex_form_title">ジャンル</div>
             <div class="flex_form_content">
                 <select name="genre">
@@ -42,7 +42,7 @@
             </div>
         </div>
 
-        <div class="flex_form_item flex_notice_title">
+        <div class="flex_form_item">
             <div class="flex_form_title">カテゴリ</div>
             <div class="flex_form_content">
                 <select name="category_id">

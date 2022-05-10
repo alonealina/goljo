@@ -447,6 +447,10 @@ select {
     text-align: center;
 }
 
+.info_mark, .golf_mark, .lady_mark {
+    line-height: 17px;
+}
+
 .info_mark_sp, .golf_mark_sp, .lady_mark_sp {
     border-radius: 3px;
     margin-bottom: 3px;
@@ -455,6 +459,10 @@ select {
     font: normal normal 600 9px/11px Open Sans;
     color: #FFFFFF;
     text-align: center;
+}
+
+.info_mark_sp, .golf_mark_sp, .lady_mark_sp {
+    line-height: 11px;
 }
 
 .info_mark, .info_mark_sp {

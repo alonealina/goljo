@@ -21,7 +21,13 @@ Route::get('practice/{id}', 'App\Http\Controllers\PracticeController@show')->nam
 
 // 管理側
 Route::get('admin/', 'App\Http\Controllers\AdminController@index')->name('admin.index');
+
 Route::get('admin/girl_list', 'App\Http\Controllers\GirlController@girl_list')->name('admin.girl_list')->middleware('login');
+Route::get('admin/girl_regist', 'App\Http\Controllers\GirlController@girl_regist')->name('admin.girl_regist')->middleware('login');
+Route::post('admin/girl_store', 'App\Http\Controllers\GirlController@girl_store')->name('admin.girl_store')->middleware('login');
+Route::get('admin/girl_edit/{id}/', 'App\Http\Controllers\GirlController@girl_edit')->name('admin.girl_edit')->middleware('login');
+Route::post('admin/girl_update', 'App\Http\Controllers\GirlController@girl_update')->name('admin.girl_update')->middleware('login');
+Route::get('admin/girl_delete/{id}/', 'App\Http\Controllers\GirlController@girl_delete')->name('admin.girl_delete')->middleware('login');
 
 Route::get('admin/event_list', 'App\Http\Controllers\EventController@event_list')->name('admin.event_list')->middleware('login');
 Route::get('admin/event_regist', 'App\Http\Controllers\EventController@event_regist')->name('admin.event_regist')->middleware('login');
