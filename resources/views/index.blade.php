@@ -142,8 +142,8 @@
     <img src="{{ asset('img/top1_sp.png') }}" class="top_img1" alt="">
     <img src="{{ asset('img/top2_sp.png') }}" class="top_img2" alt="">
     <a href="{{ route('search') }}"><img src="{{ asset('img/search_btn_sp.png') }}" class="search_btn_sp" alt=""></a>
-    <img src="{{ asset('img/top3_sp.png') }}" class="top_img3_sp" alt="">
-    <a href="{{ route('event') }}" id="pickup"><img src="{{ asset('img/event_btn_sp.png') }}" class="event_btn_sp" alt=""></a>
+    <img src="{{ asset('img/top3_sp.png') }}" class="top_img3_sp" id="pickup" alt="">
+    <a href="{{ route('event') }}"><img src="{{ asset('img/event_btn_sp.png') }}" class="event_btn_sp" alt=""></a>
 </div>
 
 <div class="content_div_sp margin_sp1">
