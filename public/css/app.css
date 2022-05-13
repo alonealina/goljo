@@ -455,14 +455,14 @@ select {
     border-radius: 3px;
     margin-bottom: 3px;
     width: 36px;
-    height: 11px;
+    height: 9px;
     font: normal normal 600 9px/11px Open Sans;
     color: #FFFFFF;
     text-align: center;
 }
 
 .info_mark_sp, .golf_mark_sp, .lady_mark_sp {
-    line-height: 13px;
+    line-height: 11px;
 }
 
 .info_mark, .info_mark_sp {
