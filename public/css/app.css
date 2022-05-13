@@ -8,6 +8,10 @@
 @media screen and (max-width: 1019px) and (min-width: 551px) {
 }
 
+*:focus {
+    outline: none;
+}
+
 body {
     font: normal normal normal 17px/17px Open Sans;
     color:#262626;
